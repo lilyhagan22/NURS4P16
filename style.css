@@ -58,3 +58,48 @@ footer { padding: 25px; text-align: center; border-top: 1px solid #cad5cf; font-
   .panel { padding: 25px; }
   h1 { letter-spacing: -1px; }
 }
+
+/* Welcome text and house sit beside each other. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+
+  width: 100%;
+  max-width: none;
+  padding: 60px 0;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 4.5vw, 56px);
+}
+
+.hero .introduction {
+  font-size: 19px;
+}
+
+/* Keep the image proportional. */
+.hero-house {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Stack the image below the text on smaller screens. */
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 0;
+  }
+
+  .hero-house {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
