@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home After Birth</title>
+  <!-- This relative path connects this HTML page to our CSS file. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="index.html">Home After Birth</a>
+    <nav aria-label="Main navigation">
+      <a href="#how-to-play">How to play</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="welcome-heading">
+      <p class="eyebrow">A choose-your-own-adventure learning activity</p>
+      <h1 id="welcome-heading">Home after birth.<br>One step at a time.</h1>
+      <p class="introduction">Follow a fictional first-time parent through their first week at home. Practise recognizing concerns, finding help, and working through barriers to care.</p>
+      <!-- For now this button goes to a section on this page. -->
+      <a class="button" href="#how-to-play">Explore the activity <span aria-hidden="true">&rarr;</span></a>
+      <p class="small-text">Learn at your own pace. No timer.</p>
+    </section>
+
+    <section class="panel" id="how-to-play" aria-labelledby="play-heading">
+      <h2 id="play-heading">How to play</h2>
+      <ol class="steps">
+        <li><h3>Meet your character</h3><p>Learn about their strengths, support, and circumstances.</p></li>
+        <li><h3>Choose the next step</h3><p>Read a short situation and decide what your character could do.</p></li>
+        <li><h3>Explore your choices</h3><p>Read the feedback and consider what might make getting help easier or harder.</p></li>
+      </ol>
+      <p class="development-note">The character stories are coming next as we build this student project.</p>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About this project</h2>
+      <p>Created for NURS 4P16. This site is an educational prototype with fictional stories. It does not assess symptoms or provide individual medical advice.</p>
+      <p>Clinical scenarios and local support resources will be added after review.</p>
+    </section>
+  </main>
+
+  <footer><p>Home After Birth &middot; NURS 4P16 learning project</p></footer>
+</body>
+</html>
