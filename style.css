@@ -354,3 +354,34 @@ button.button:focus-visible {
     padding-top: 30px;
   }
 }
+
+/* Plant and books beside the character page buttons */
+.character-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.character-decoration {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.character-bottom .character-actions {
+  margin-top: 0;
+}
+
+@media (max-width: 650px) {
+  .character-bottom {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .character-decoration {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
