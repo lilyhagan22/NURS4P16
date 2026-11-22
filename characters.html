@@ -27,7 +27,7 @@
         You can return and explore the other story later.
       </p>
 
-      <form action="story.html" method="get">
+      <form id="character-form" action="alex.html" method="get">
         <fieldset class="character-options">
           <legend>Who would you like to follow?</legend>
 
@@ -80,5 +80,15 @@
   <footer>
     <p>Home After Birth &middot; NURS 4P16 learning project</p>
   </footer>
+    <script>
+    document.getElementById("character-form").addEventListener("submit", function (event) {
+      const character = new FormData(this).get("character");
+
+      if (character === "jordan") {
+        event.preventDefault();
+        window.alert("Jordan’s story is coming next. Please choose Alex to explore the current story.");
+      }
+    });
+  </script>
 </body>
 </html>
