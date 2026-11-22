@@ -68,7 +68,7 @@ footer { padding: 25px; text-align: center; border-top: 1px solid #cad5cf; font-
 
   width: 100%;
   max-width: none;
-  padding: 35px 0 60px;
+  padding: 35px 0 50px;
 }
 
 .hero-text {
@@ -95,7 +95,7 @@ footer { padding: 25px; text-align: center; border-top: 1px solid #cad5cf; font-
   .hero {
     grid-template-columns: 1fr;
     gap: 25px;
-    padding: 24px 0 40px;
+    padding: 25px 0 50px;
   }
 
   .hero-house {
