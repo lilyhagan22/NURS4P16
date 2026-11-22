@@ -636,3 +636,17 @@ button.button:focus-visible {
     padding: 22px;
   }
 }
+
+/* Calendar beside Alex’s follow-up story */
+.scene-calendar {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 750px) {
+  .scene-calendar {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
