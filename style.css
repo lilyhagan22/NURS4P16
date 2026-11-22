@@ -765,3 +765,23 @@ button.button:focus-visible {
     margin: 0 auto;
   }
 }
+
+/* Jordan’s conversation with the nurse */
+.scene-conversation {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.scene-example-quote {
+  margin: 18px 0;
+  font-style: italic;
+  color: var(--teal);
+}
+
+@media (max-width: 750px) {
+  .scene-conversation {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
