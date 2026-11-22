@@ -565,3 +565,74 @@ button.button:focus-visible {
     padding: 16px;
   }
 }
+
+/* Scene 2: encouragement and optional writing practice */
+.scene-encouragement {
+  margin-top: 25px;
+  padding: 22px 28px;
+  border-radius: 20px;
+  background: #f4e5d5;
+}
+
+.scene-encouragement p {
+  margin: 0;
+}
+
+.practice-panel {
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--sage);
+}
+
+.practice-panel h2 {
+  font-size: 29px;
+}
+
+.practice-panel > .eyebrow {
+  margin-top: 0;
+}
+
+.practice-panel > label {
+  display: block;
+  font-weight: bold;
+}
+
+.practice-input {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  margin: 18px 0 22px;
+  padding: 16px;
+  border: 2px solid #78998a;
+  border-radius: 12px;
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.practice-input::placeholder {
+  color: #52636a;
+  opacity: 1;
+}
+
+.practice-input:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.practice-panel blockquote {
+  margin: 15px 0;
+  font-style: italic;
+}
+
+.practice-panel .scene-feedback h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .practice-panel {
+    padding: 22px;
+  }
+}
