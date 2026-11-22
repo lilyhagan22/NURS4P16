@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before heading home | Home After Birth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="index.html">Home After Birth</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="characters.html">Characters</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="scene-page" aria-labelledby="scene-heading">
+
+      <header class="scene-header">
+        <p class="eyebrow">Alex’s story · Scene 2 of 3</p>
+        <h1 id="scene-heading">Before heading home</h1>
+      </header>
+
+      <noscript>
+        <p>This activity needs JavaScript enabled to check your choices.</p>
+      </noscript>
+
+      <section class="story-bubble" aria-label="Alex’s situation">
+        <p>
+          Alex has received treatment for her heavy bleeding.
+          Her healthcare team has assessed her and says she can
+          return home with a follow-up plan.
+        </p>
+        <p>A healthcare professional reviews her instructions:</p>
+        <blockquote>
+          “Monitor for recurrent symptoms and attend your
+          follow-up appointment.”
+        </blockquote>
+        <p>
+          Alex understands some of this, but she is unsure what
+          “recurrent symptoms” means or what changes she should
+          watch for. She is tired, thinking about Wren, and
+          worried she will forget something.
+        </p>
+        <blockquote>
+          “They’ve already explained it. Should I ask again?”
+        </blockquote>
+      </section>
+
+      <form id="clarification-question" class="scene-question">
+        <fieldset class="scene-choices">
+          <legend>What could Alex say?</legend>
+
+          <label class="scene-choice">
+            <input type="radio" name="clarification" value="A" required>
+            <span>
+              <strong>A.</strong> “Okay, thank you.”
+              She can try to work out the unfamiliar words at home.
+            </span>
+          </label>
+
+          <label class="scene-choice">
+            <input type="radio" name="clarification" value="B">
+            <span>
+              <strong>B.</strong> “Could you explain that in everyday
+              words? What should I watch for, and what should I do
+              if it happens?”
+            </span>
+          </label>
+
+          <label class="scene-choice">
+            <input type="radio" name="clarification" value="C">
+            <span>
+              <strong>C.</strong> “Sam can read the instructions later.”
+              She can leave the questions for him.
+            </span>
+          </label>
+        </fieldset>
+
+        <button type="submit" class="button">Check my choice</button>
+      </form>
+
+      <section id="clarification-feedback" class="scene-feedback"
+               aria-labelledby="clarification-title" tabindex="-1" hidden>
+        <h2 id="clarification-title"></h2>
+        <p id="clarification-text"></p>
+      </section>
+
+      <div id="follow-up-section" hidden>
+        <aside class="scene-encouragement">
+          <p>
+            <strong>It is okay to ask someone to explain that
+            another way.</strong>
+            You deserve information you can understand.
+          </p>
+        </aside>
+
+        <section class="scene-part" aria-labelledby="plan-heading">
+          <h2 id="plan-heading">Making the plan work at home</h2>
+
+          <div class="story-bubble">
+            <p>
+              The healthcare professional explains the instructions
+              in everyday language and reviews the warning signs
+              with Alex.
+            </p>
+            <p>
+              Before arranging follow-up, they ask whether anything
+              might make attending difficult.
+            </p>
+            <p>
+              Alex thinks about the shared car, the distance from
+              home, and Sam’s work schedule.
+            </p>
+          </div>
+
+          <form id="follow-up-question" class="scene-question">
+            <fieldset class="scene-choices">
+              <legend>
+                What could help Alex make a workable plan?
+              </legend>
+
+              <label class="scene-choice">
+                <input type="radio" name="follow-up" value="A" required>
+                <span>
+                  <strong>A.</strong> Accept the appointment without
+                  mentioning transportation. She can cancel later
+                  if she cannot get there.
+                </span>
+              </label>
+
+              <label class="scene-choice">
+                <input type="radio" name="follow-up" value="B">
+                <span>
+                  <strong>B.</strong> Skip follow-up if she feels
+                  better, because travelling would be difficult.
+                </span>
+              </label>
+
+              <label class="scene-choice">
+                <input type="radio" name="follow-up" value="C">
+                <span>
+                  <strong>C.</strong> Explain her transportation
+                  difficulties and ask the team to help arrange
+                  a follow-up plan she can attend.
+                </span>
+              </label>
+            </fieldset>
+
+            <button type="submit" class="button">Check my choice</button>
+          </form>
+
+          <section id="follow-up-feedback" class="scene-feedback"
+                   aria-labelledby="follow-up-title" tabindex="-1" hidden>
+            <h2 id="follow-up-title"></h2>
+            <p id="follow-up-text"></p>
+          </section>
+        </section>
+      </div>
+
+      <div id="practice-and-ending" hidden>
+        <section class="scene-part practice-panel"
+                 aria-labelledby="practice-heading">
+          <p class="eyebrow">Optional practice</p>
+          <h2 id="practice-heading">Help Alex find the words</h2>
+
+          <label for="practice-response">
+            Write one or two sentences Alex could use to ask for
+            clarification or explain a barrier to following her care plan.
+          </label>
+
+          <p id="practice-help" class="small-text">
+            Use Alex’s fictional situation. Do not enter your own
+            health information. Your response is not graded, saved,
+            or sent anywhere.
+          </p>
+
+          <textarea id="practice-response"
+                    class="practice-input"
+                    rows="5"
+                    maxlength="1200"
+                    autocomplete="off"
+                    aria-describedby="practice-help"
+                    placeholder="I want to make sure I understand…"></textarea>
+
+          <button id="example-button"
+                  type="button"
+                  class="button"
+                  aria-expanded="false"
+                  aria-controls="practice-example">
+            Show an example
+          </button>
+
+          <section id="practice-example"
+                   class="scene-feedback"
+                   aria-labelledby="example-heading"
+                   tabindex="-1" hidden>
+            <h3 id="example-heading">One way Alex could say it</h3>
+            <blockquote>
+              “I want to make sure I understand what to watch for
+              and whom to contact. We share one car, and getting
+              to appointments can be difficult. Can we make a
+              follow-up plan that works with my transportation?”
+            </blockquote>
+
+            <p><strong>Did your response include any of these?</strong></p>
+            <ul>
+              <li>What Alex needs explained.</li>
+              <li>A practical concern or barrier.</li>
+              <li>A question about the next step.</li>
+            </ul>
+            <p>
+              There is no single perfect response.
+              The goal is to help Alex communicate what she needs.
+            </p>
+          </section>
+        </section>
+
+        <section class="scene-ending" aria-labelledby="ending-heading">
+          <div class="scene-takeaway">
+            <h2 id="ending-heading">A clear plan is a shared responsibility.</h2>
+            <p>
+              Alex’s healthcare team asks her to explain the plan
+              in her own words so they can check how clearly they
+              explained it. Together, they review anything that
+              remains unclear.
+            </p>
+            <p>
+              Alex leaves with written instructions, contact
+              information, and an agreed follow-up plan.
+              She also knows she can ask more questions.
+            </p>
+          </div>
+
+          <p>
+            Back at home, Alex continues adjusting to recovery
+            and caring for Wren. As the days pass, she notices
+            changes in how she feels emotionally.
+          </p>
+
+          <a class="button" href="alex-scene3.html">
+            Continue to Scene 3 <span aria-hidden="true">&rarr;</span>
+          </a>
+        </section>
+      </div>
+
+      <p><a href="alex-scene1.html">&larr; Back to Scene 1</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Home After Birth &middot; NURS 4P16 learning project</p>
+  </footer>
+
+  <script>
+    const clarificationForm = document.getElementById("clarification-question");
+    const followUpForm = document.getElementById("follow-up-question");
+    const exampleButton = document.getElementById("example-button");
+
+    clarificationForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const choice = new FormData(clarificationForm).get("clarification");
+      const correct = choice === "B";
+
+      document.getElementById("clarification-title").textContent =
+        correct
+          ? "Asking for clarification helps Alex take part in her care."
+          : "Alex deserves instructions she understands before leaving.";
+
+      document.getElementById("clarification-text").textContent =
+        correct
+          ? "Alex has identified what is unclear and asked for specific information. She can also ask for a short written plan to refer to at home."
+          : "Written information and support from Sam may help, but they do not replace an explanation Alex can use herself. She can ask what to watch for, what action to take, and whom to contact.";
+
+      const feedback = document.getElementById("clarification-feedback");
+      feedback.hidden = false;
+      document.getElementById("follow-up-section").hidden = false;
+      feedback.focus();
+    });
+
+    followUpForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const choice = new FormData(followUpForm).get("follow-up");
+      const correct = choice === "C";
+
+      document.getElementById("follow-up-title").textContent =
+        correct
+          ? "A useful plan needs to fit Alex’s circumstances."
+          : "Difficulty getting to an appointment is a barrier worth discussing.";
+
+      document.getElementById("follow-up-text").textContent =
+        correct
+          ? "Sharing her transportation concerns gives the team an opportunity to discuss appointment timing and available support. Alex can ask whether any parts of follow-up can happen by phone or video, while confirming which assessments require an in-person visit. These options depend on her care needs and the services available."
+          : "Alex should not have to work through it alone. Telling the team before leaving gives them a chance to help her plan. She should confirm any changes to recommended follow-up with her healthcare professional.";
+
+      const feedback = document.getElementById("follow-up-feedback");
+      feedback.hidden = false;
+      document.getElementById("practice-and-ending").hidden = false;
+      feedback.focus();
+    });
+
+    exampleButton.addEventListener("click", function () {
+      const example = document.getElementById("practice-example");
+      const opening = example.hidden;
+
+      example.hidden = !opening;
+      exampleButton.setAttribute("aria-expanded", String(opening));
+      exampleButton.textContent =
+        opening ? "Hide the example" : "Show an example";
+
+      if (opening) {
+        example.focus();
+      }
+    });
+  </script>
+</body>
+</html>
