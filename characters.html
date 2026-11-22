@@ -83,16 +83,17 @@
 
   <footer>
     <p>Home After Birth &middot; NURS 4P16 learning project</p>
-  </footer>
+  
     <script>
     document.getElementById("character-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
       const character = new FormData(this).get("character");
 
-      if (character === "jordan") {
-        event.preventDefault();
-        window.alert("Jordan’s story is coming next. Please choose Alex to explore the current story.");
+      if (character === "alex") {
+        window.location.href = "alex.html";
+      } else if (character === "jordan") {
+        window.location.href = "jordan.html";
       }
     });
-  </script>
-</body>
-</html>
+  </script> 
