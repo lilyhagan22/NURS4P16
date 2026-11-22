@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet your character | Home After Birth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="index.html">Home After Birth</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#how-to-play">How to play</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="character-section" aria-labelledby="character-heading">
+      <p class="eyebrow">Your adventure starts here</p>
+      <h1 id="character-heading">Meet your character</h1>
+      <p class="character-introduction">
+        Choose a parent to follow through their first week at home.
+        You can return and explore the other story later.
+      </p>
+
+      <form action="story.html" method="get">
+        <fieldset class="character-options">
+          <legend>Who would you like to follow?</legend>
+
+          <div class="character-option">
+            <input type="radio" id="alex" name="character"
+                   value="alex" required>
+            <label class="character-card" for="alex">
+              <span class="character-portrait portrait-alex"
+                    aria-hidden="true">A</span>
+              <span class="character-description">
+                <span class="character-name">Alex</span>
+                <span>
+                  A thoughtful planner learning to balance recovery
+                  and caring for a new baby.
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <div class="character-option">
+            <input type="radio" id="jordan" name="character"
+                   value="jordan">
+            <label class="character-card" for="jordan">
+              <span class="character-portrait portrait-jordan"
+                    aria-hidden="true">J</span>
+              <span class="character-description">
+                <span class="character-name">Jordan</span>
+                <span>
+                  A curious learner taking things one step at a time
+                  and building a support network.
+                </span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <p class="character-note">
+          Every family is different. These fictional characters show
+          individual experiences, not everyone’s experience.
+        </p>
+
+        <div class="character-actions">
+          <button class="button" type="submit">
+            Continue <span aria-hidden="true">&rarr;</span>
+          </button>
+          <a href="index.html">Back to home</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Home After Birth &middot; NURS 4P16 learning project</p>
+  </footer>
+</body>
+</html>
