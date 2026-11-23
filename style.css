@@ -785,3 +785,84 @@ button.button:focus-visible {
     margin: 0 auto;
   }
 }
+
+/* Jordan Scene 2: guided conversation builder */
+.phrase-builder {
+  display: grid;
+  gap: 22px;
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--sage);
+}
+
+.phrase-step label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--teal);
+}
+
+.phrase-step select {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px;
+  border: 2px solid #78998a;
+  border-radius: 10px;
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+}
+
+.phrase-step select:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.phrase-builder > .button {
+  justify-self: start;
+}
+
+#built-response h3,
+#plan-feedback h3 {
+  margin-top: 0;
+}
+
+/* Illustrations inside the expandable care cards */
+.care-card-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 220px);
+  align-items: center;
+  gap: 25px;
+}
+
+.care-card-layout h3 {
+  margin-top: 0;
+}
+
+.care-image {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.medication-image {
+  max-width: 140px;
+}
+
+@media (max-width: 650px) {
+  .phrase-builder {
+    padding: 22px;
+  }
+
+  .care-card-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .phrase-step select {
+    font-size: 16px;
+  }
+}
