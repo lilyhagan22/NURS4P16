@@ -935,3 +935,256 @@ button.button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Shared knowledge check and feedback page */
+.finish-page {
+  max-width: 950px;
+}
+
+.quiz-question-card {
+  margin-bottom: 28px;
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--sage);
+}
+
+.quiz-question-card h2 {
+  font-size: 25px;
+}
+
+.quiz-question-card legend {
+  font-size: 19px;
+  font-weight: normal;
+}
+
+.quiz-question-card .scene-choice {
+  background: var(--cream);
+}
+
+.quiz-question-card .scene-choices {
+  margin-bottom: 0;
+}
+
+.quiz-score {
+  color: var(--teal);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.answer-explanation {
+  margin: 18px 0;
+  padding: 22px 25px;
+  border-radius: 18px;
+  background: var(--sage);
+}
+
+.answer-explanation h3 {
+  margin-top: 0;
+}
+
+.answer-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.answer-outcome {
+  color: var(--teal);
+  font-weight: bold;
+}
+
+.finish-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.button-secondary {
+  background: var(--sage);
+  color: var(--teal);
+}
+
+.button-secondary:hover {
+  background: #d4e2d8;
+}
+
+.finish-page button.button {
+  font: inherit;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+.finish-page button:focus-visible,
+.finish-page [tabindex="-1"]:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 5px;
+}
+
+/* Feedback introduction and plant */
+.feedback-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.feedback-intro h2 {
+  font-size: 32px;
+}
+
+.feedback-plant {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Choose a feedback perspective */
+.reviewer-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.reviewer-option {
+  padding: 25px;
+  border: 3px solid transparent;
+  border-radius: 22px;
+  background: var(--sage);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.reviewer-option strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 23px;
+  color: var(--teal);
+}
+
+.reviewer-option span {
+  display: block;
+  font-size: 17px;
+}
+
+.reviewer-option:hover,
+.reviewer-option[aria-pressed="true"] {
+  border-color: var(--teal);
+}
+
+.feedback-panel {
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--sage);
+}
+
+.feedback-panel > h3 {
+  margin-top: 0;
+  font-size: 27px;
+}
+
+.feedback-field {
+  margin: 25px 0;
+}
+
+.feedback-field label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feedback-field select {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  padding: 12px;
+  border: 2px solid #78998a;
+  border-radius: 10px;
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+}
+
+.feedback-field select:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.text-button {
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: var(--teal);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+
+/* Completion celebration */
+.completion-section {
+  margin-top: 50px;
+  padding: 35px 25px;
+  border-radius: 25px;
+  background: var(--sage);
+  text-align: center;
+}
+
+.completion-image {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.completion-section h2 {
+  font-size: clamp(29px, 4vw, 40px);
+}
+
+.completion-message {
+  font-weight: bold;
+  color: var(--teal);
+}
+
+.completion-section .finish-actions {
+  justify-content: center;
+}
+
+.finish-source-list {
+  padding-left: 22px;
+}
+
+.finish-source-list li {
+  margin-bottom: 15px;
+}
+
+.finish-warning {
+  margin: 45px 0 0;
+}
+
+@media (max-width: 650px) {
+  .reviewer-options {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-intro {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 15px;
+  }
+
+  .quiz-question-card,
+  .feedback-panel {
+    padding: 22px;
+  }
+
+  .feedback-field select {
+    font-size: 16px;
+  }
+}
