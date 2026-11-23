@@ -866,3 +866,72 @@ button.button:focus-visible {
     font-size: 16px;
   }
 }
+
+/* Jordan Scene 3: information illustrations */
+.scene-learning-image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.pamphlet-image {
+  max-width: 220px;
+}
+
+/* Fictional search-result cards */
+.source-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.source-card {
+  min-width: 0;
+  padding: 24px;
+  border: 2px solid #bdcfc3;
+  border-radius: 22px;
+  background: var(--sage);
+}
+
+.source-card .eyebrow {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.source-card h3 {
+  margin-top: 0;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.source-card p,
+.source-card blockquote {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.source-card blockquote {
+  margin: 18px 0;
+  font-style: italic;
+}
+
+.source-card p:last-child {
+  margin-bottom: 0;
+}
+
+.source-ending {
+  margin-top: 25px;
+}
+
+.phrase-step select[aria-invalid="true"] {
+  border-color: var(--accent);
+}
+
+@media (max-width: 850px) {
+  .source-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
