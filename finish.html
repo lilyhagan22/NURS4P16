@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check your understanding | Home After Birth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="index.html">Home After Birth</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="characters.html">Characters</a>
+      <a href="#support">Find support</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="scene-page finish-page">
+
+      <header class="scene-header">
+        <p class="eyebrow">Bring it all together</p>
+        <h1 id="quiz-heading">Check your understanding</h1>
+        <p>
+          Practice what you’ve learned with five short questions.
+          Choose one answer for each question, then select
+          <strong>Check my answers</strong>.
+          You can try again at any time.
+        </p>
+      </header>
+
+      <noscript>
+        <p>
+          Enable JavaScript to use the quiz and feedback activities.
+          You can still explore the support resources below.
+        </p>
+      </noscript>
+
+      <form id="knowledge-check" aria-labelledby="quiz-heading">
+        <div id="quiz-questions"></div>
+        <button id="check-answers" class="button" type="submit" disabled>
+          Check my answers
+        </button>
+      </form>
+
+      <section id="quiz-results" class="scene-part"
+               aria-labelledby="results-heading" tabindex="-1" hidden>
+        <h2 id="results-heading">Your results</h2>
+        <p id="quiz-score" class="quiz-score"></p>
+        <p>
+          Review the explanations below.
+          You can return to either story for more practice.
+        </p>
+
+        <div id="answer-explanations"></div>
+
+        <div class="finish-actions">
+          <button id="retry-quiz" class="button button-secondary" type="button">
+            Try again
+          </button>
+          <button id="open-feedback" class="button" type="button">
+            Continue to feedback <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="feedback-section" class="scene-part"
+               aria-labelledby="feedback-heading" tabindex="-1" hidden>
+
+        <div class="feedback-intro">
+          <div>
+            <p class="eyebrow">Your perspective</p>
+            <h2 id="feedback-heading">Reflect on the activity</h2>
+            <p>
+              Which perspective are you using to review
+              <strong>Home After Birth</strong>?
+            </p>
+          </div>
+
+          <img src="feedback-plant.png" alt=""
+               class="feedback-plant" loading="lazy">
+        </div>
+
+        <div class="reviewer-options"
+             role="group" aria-label="Choose your review perspective">
+          <button class="reviewer-option" id="learner-button"
+                  type="button" aria-pressed="false"
+                  aria-controls="feedback-panel">
+            <strong>Learner</strong>
+            <span>
+              Parent, support person, student, or another visitor
+              exploring postpartum care.
+            </span>
+          </button>
+
+          <button class="reviewer-option" id="reviewer-button"
+                  type="button" aria-pressed="false"
+                  aria-controls="feedback-panel">
+            <strong>Healthcare reviewer</strong>
+            <span>
+              Nurse or another healthcare professional reviewing
+              the resource for teaching.
+            </span>
+          </button>
+        </div>
+
+        <form id="feedback-panel" class="feedback-panel"
+              aria-labelledby="feedback-panel-heading" hidden>
+          <h3 id="feedback-panel-heading" tabindex="-1"></h3>
+          <p id="feedback-panel-intro"></p>
+          <p class="small-text">All feedback questions are optional.</p>
+
+          <div id="rating-questions"></div>
+          <div id="comment-questions"></div>
+
+          <button class="button" type="submit">Finish activity</button>
+        </form>
+
+        <p>
+          <button id="skip-feedback" class="text-button" type="button">
+            Skip feedback and finish the activity
+          </button>
+        </p>
+      </section>
+
+      <section id="completion-section" class="completion-section"
+               aria-labelledby="completion-heading" tabindex="-1" hidden>
+        <img src="completion.png" alt=""
+             class="completion-image" loading="lazy">
+
+        <p class="eyebrow">One step at a time</p>
+        <h2 id="completion-heading">You’ve completed the activity</h2>
+        <p>
+          You’ve practiced recognizing concerns, asking questions,
+          working through barriers, and finding support after birth.
+        </p>
+        <p class="completion-message">
+          You deserve understandable information, respectful care,
+          and a plan you can use.
+        </p>
+
+        <div class="finish-actions">
+          <a class="button" href="characters.html">
+            Explore another character
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="button button-secondary" href="index.html">
+            Return home
+          </a>
+        </div>
+
+        <p>
+          <a href="#support">Find support</a>
+          <span aria-hidden="true"> · </span>
+          <a href="#references">View references</a>
+        </p>
+      </section>
+
+      <section id="support" class="scene-part"
+               aria-labelledby="support-heading">
+        <h2 id="support-heading">Find support</h2>
+        <p>
+          These resources can help you find information and
+          connect with services. They do not replace emergency care.
+        </p>
+
+        <div class="support-resources">
+          <div class="support-resource">
+            <h3>Your healthcare team</h3>
+            <p>
+              Ask your family doctor, nurse practitioner, midwife,
+              or maternity team about your recovery, follow-up,
+              and local support.
+            </p>
+          </div>
+
+          <div class="support-resource">
+            <h3>Health811 Ontario</h3>
+            <p>
+              Call 811 or visit the website for nursing advice
+              and help finding health services.
+            </p>
+            <a href="https://health811.ontario.ca/">
+              Visit Health811 <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="support-resource">
+            <h3>Community support</h3>
+            <p>
+              Ask your local public health unit about postpartum
+              programs. In Niagara, you can contact Niagara Parents.
+              Check availability and eligibility.
+            </p>
+            <a href="https://niagararegion.ca/parents/contact.aspx">
+              Visit Niagara Parents <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="scene-part"
+               aria-labelledby="references-heading">
+        <h2 id="references-heading">Sources and further reading</h2>
+        <ul class="finish-source-list">
+          <li>
+            <a href="https://www.canada.ca/en/public-health/services/child-infant-health/postpartum-health-guide.html">
+              Public Health Agency of Canada:
+              Your guide to postpartum health and caring for your baby
+            </a>
+          </li>
+          <li>
+            <a href="https://pcmch.on.ca/program/postpartum-warning-signs/">
+              Provincial Council for Maternal and Child Health:
+              Postpartum warning signs
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cma.ca/healthcare-for-real/where-should-we-get-our-health-information">
+              Canadian Medical Association:
+              Where should we get our health information from?
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <aside class="scene-emergency finish-warning"
+             aria-labelledby="warning-heading">
+        <h2 id="warning-heading">When help cannot wait</h2>
+        <p>
+          If someone develops chest pain, difficulty breathing,
+          a seizure, or another immediate threat to safety
+          after birth, <strong>call 911</strong>.
+        </p>
+        <p>
+          This activity supports learning and does not replace
+          individual medical assessment.
+        </p>
+      </aside>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>Home After Birth &middot; NURS 4P16 learning project</p>
+  </footer>
+
+  <script>
+    const quizQuestions = [
+      {
+        title: "Recognizing a warning sign",
+        question: "A parent gave birth five days ago. They suddenly develop chest pain and difficulty breathing. What should they do?",
+        options: [
+          "Rest and see whether it improves overnight.",
+          "Call 911 immediately.",
+          "Wait until their next routine appointment."
+        ],
+        correct: 1,
+        explanation: "Chest pain and difficulty breathing after birth require emergency help. Do not wait for a routine appointment."
+      },
+      {
+        title: "Working through barriers to care",
+        question: "A parent cannot afford equipment recommended in their care plan and has difficulty getting to appointments. What is the most helpful next step?",
+        options: [
+          "Skip the parts of the plan they cannot access.",
+          "Keep these difficulties to themselves.",
+          "Explain the barriers and ask the healthcare team to help make a workable plan."
+        ],
+        correct: 2,
+        explanation: "Cost and transportation can make care difficult to access. Your team can help explore available support and appropriate alternatives."
+      },
+      {
+        title: "Asking questions",
+        question: "A healthcare professional uses a word a parent does not understand. What could the parent say?",
+        options: [
+          "“Could you explain that in everyday words and tell me what I should do next?”",
+          "“I should already know this, so I won’t ask.”",
+          "“I’ll pretend I understand and work it out later.”"
+        ],
+        correct: 0,
+        explanation: "You deserve information you understand. Explaining the plan in your own words can help you and the healthcare professional check that it is clear."
+      },
+      {
+        title: "Checking online health information",
+        question: "Which approach is most helpful when deciding whether online health advice is trustworthy?",
+        options: [
+          "Trust the post with the most likes.",
+          "Check who wrote it, the supporting evidence, its date, and whether it applies to the situation.",
+          "Trust any article that uses medical words."
+        ],
+        correct: 1,
+        explanation: "Likes, professional-looking designs, and medical words do not prove a claim is accurate. Personal stories can offer connection, but may not apply to your care. Ask your healthcare team before changing treatment based on online advice."
+      },
+      {
+        title: "Finding local support",
+        question: "A parent recently moved to a community and wants to find postpartum programs and support. Where could they start?",
+        options: [
+          "Assume nothing is available because they do not know anyone locally.",
+          "Rely only on advertisements in their social media feed.",
+          "Contact their local public health unit or ask their healthcare team about community services."
+        ],
+        correct: 2,
+        explanation: "They can help you find postpartum programs and community support. Check each service’s availability and eligibility."
+      }
+    ];
+
+    const feedbackContent = {
+      learner: {
+        heading: "Learner feedback",
+        intro: "Thinking about the story you explored, how much do you agree with each statement?",
+        questions: [
+          "The information was easy to understand.",
+          "The activity helped me recognize when someone should seek medical help after birth.",
+          "I feel more confident asking questions about postpartum care.",
+          "The activity helped me think about barriers to getting care and possible support.",
+          "The characters and their circumstances were presented respectfully.",
+          "The website was easy to navigate."
+        ],
+        extraOption: "Not applicable",
+        comments: [
+          "What would make this activity more useful or easier to use?"
+        ]
+      },
+      reviewer: {
+        heading: "Healthcare reviewer feedback",
+        intro: "Thinking about the story you reviewed, how much do you agree with each statement?",
+        questions: [
+          "The clinical information and recommended actions were accurate.",
+          "The content was appropriate for first-time parents.",
+          "The language and explanations were clear.",
+          "The activities supported applying information to everyday decisions.",
+          "The scenarios meaningfully addressed barriers to accessing care.",
+          "The characters and their circumstances were presented respectfully.",
+          "I would consider recommending this activity as a supplement to postpartum teaching."
+        ],
+        extraOption: "Unable to assess",
+        comments: [
+          "Did you notice information that needs correction or clarification?",
+          "What would improve this resource for the population you work with?"
+        ]
+      }
+    };
+
+    function makeElement(tag, className, text) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      if (text !== undefined) element.textContent = text;
+      return element;
+    }
+
+    const quizForm = document.getElementById("knowledge-check");
+    const questionsContainer = document.getElementById("quiz-questions");
+    const results = document.getElementById("quiz-results");
+    const feedbackSection = document.getElementById("feedback-section");
+    const completionSection = document.getElementById("completion-section");
+    const letters = ["A", "B", "C"];
+
+    quizQuestions.forEach(function (item, index) {
+      const questionCard = makeElement("section", "quiz-question-card");
+      const heading = makeElement(
+        "h2", "", (index + 1) + ". " + item.title
+      );
+      const fieldset = makeElement("fieldset", "scene-choices");
+      const legend = makeElement("legend", "", item.question);
+      fieldset.append(legend);
+
+      item.options.forEach(function (option, optionIndex) {
+        const label = makeElement("label", "scene-choice");
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "question-" + index;
+        input.value = String(optionIndex);
+        input.required = true;
+
+        const text = makeElement(
+          "span", "", letters[optionIndex] + ". " + option
+        );
+
+        label.append(input, text);
+        fieldset.append(label);
+      });
+
+      questionCard.append(heading, fieldset);
+      questionsContainer.append(questionCard);
+    });
+
+    document.getElementById("check-answers").disabled = false;
+
+    quizForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const answers = new FormData(quizForm);
+      const explanations = document.getElementById("answer-explanations");
+      explanations.replaceChildren();
+
+      let score = 0;
+
+      quizQuestions.forEach(function (item, index) {
+        const selected = Number(answers.get("question-" + index));
+        const correct = selected === item.correct;
+        if (correct) score++;
+
+        const card = makeElement("section", "answer-explanation");
+        const heading = makeElement(
+          "h3", "", (index + 1) + ". " + item.title
+        );
+        const outcome = makeElement(
+          "p", "answer-outcome",
+          correct ? "Your answer is correct." : "Review this answer."
+        );
+        const answer = makeElement(
+          "p", "",
+          "Correct answer: " + letters[item.correct] + ". " +
+          item.options[item.correct]
+        );
+        const explanation = makeElement("p", "", item.explanation);
+
+        card.append(heading, outcome, answer, explanation);
+        explanations.append(card);
+      });
+
+      document.getElementById("quiz-score").textContent =
+        "You answered " + score + " out of 5 correctly.";
+
+      results.hidden = false;
+      results.focus();
+    });
+
+    document.getElementById("retry-quiz").addEventListener("click", function () {
+      quizForm.reset();
+      results.hidden = true;
+      feedbackSection.hidden = true;
+      completionSection.hidden = true;
+      document.getElementById("answer-explanations").replaceChildren();
+      quizForm.querySelector("input").focus();
+    });
+
+    document.getElementById("open-feedback").addEventListener("click", function () {
+      feedbackSection.hidden = false;
+      feedbackSection.focus();
+    });
+
+    function showFeedback(type) {
+      const content = feedbackContent[type];
+      const panel = document.getElementById("feedback-panel");
+      const ratings = document.getElementById("rating-questions");
+      const comments = document.getElementById("comment-questions");
+
+      ratings.replaceChildren();
+      comments.replaceChildren();
+
+      document.getElementById("feedback-panel-heading").textContent =
+        content.heading;
+      document.getElementById("feedback-panel-intro").textContent =
+        content.intro;
+
+      document.getElementById("learner-button").setAttribute(
+        "aria-pressed", String(type === "learner")
+      );
+      document.getElementById("reviewer-button").setAttribute(
+        "aria-pressed", String(type === "reviewer")
+      );
+
+      const ratingOptions = [
+        "Strongly disagree",
+        "Disagree",
+        "Neither agree nor disagree",
+        "Agree",
+        "Strongly agree",
+        content.extraOption
+      ];
+
+      content.questions.forEach(function (question, index) {
+        const row = makeElement("div", "feedback-field");
+        const id = type + "-rating-" + index;
+        const label = makeElement(
+          "label", "", (index + 1) + ". " + question
+        );
+        label.htmlFor = id;
+
+        const select = document.createElement("select");
+        select.id = id;
+
+        const placeholder = makeElement("option", "", "Choose a response…");
+        placeholder.value = "";
+        select.append(placeholder);
+
+        ratingOptions.forEach(function (text) {
+          const option = makeElement("option", "", text);
+          option.value = text;
+          select.append(option);
+        });
+
+        row.append(label, select);
+        ratings.append(row);
+      });
+
+      content.comments.forEach(function (question, index) {
+        const row = makeElement("div", "feedback-field");
+        const id = type + "-comment-" + index;
+        const label = makeElement("label", "", question + " (Optional)");
+        label.htmlFor = id;
+
+        const textarea = makeElement("textarea", "practice-input");
+        textarea.id = id;
+        textarea.rows = 4;
+        textarea.maxLength = 2000;
+        textarea.autocomplete = "off";
+        textarea.placeholder = "Write your thoughts here…";
+
+        row.append(label, textarea);
+        comments.append(row);
+      });
+
+      panel.hidden = false;
+      document.getElementById("feedback-panel-heading").focus();
+    }
+
+    document.getElementById("learner-button").addEventListener(
+      "click", function () { showFeedback("learner"); }
+    );
+
+    document.getElementById("reviewer-button").addEventListener(
+      "click", function () { showFeedback("reviewer"); }
+    );
+
+    function finishActivity() {
+      feedbackSection.hidden = true;
+      completionSection.hidden = false;
+      completionSection.focus();
+    }
+
+    document.getElementById("feedback-panel").addEventListener(
+      "submit", function (event) {
+        event.preventDefault();
+        finishActivity();
+      }
+    );
+
+    document.getElementById("skip-feedback").addEventListener(
+      "click", finishActivity
+    );
+  </script>
+</body>
+</html>
