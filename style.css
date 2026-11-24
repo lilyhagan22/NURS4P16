@@ -1190,12 +1190,12 @@ button.button:focus-visible {
 }
 
 /* Homepage revisions: Baby Steps at Home */
-.home-page .site-name {
+.site-name {
   font-size: clamp(25px, 3vw, 30px);
   line-height: 1.25;
 }
 
-.home-page .hero .eyebrow {
+.eyebrow {
   font-size: 18px;
 }
 
