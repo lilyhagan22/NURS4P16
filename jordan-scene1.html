@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Will they take me seriously? | Home After Birth</title>
+
+  <title>Will they take me seriously? | Baby Steps at Home</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="site-name" href="index.html">Home After Birth</a>
+    <a class="site-name" href="index.html">Baby Steps at Home</a>
+
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="characters.html">Characters</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html#about">About this project</a>
     </nav>
   </header>
 
@@ -23,34 +27,45 @@
 
       <header class="scene-header">
         <p class="eyebrow">Jordan’s story · Scene 1 of 3</p>
-        <h1 id="scene-heading">“Will they take me seriously?”</h1>
+        <h1 id="scene-heading">Will they take me seriously?</h1>
       </header>
 
       <noscript>
         <p>This activity needs JavaScript enabled to check your choices.</p>
       </noscript>
 
+      <!-- First situation -->
       <section class="story-bubble" aria-label="Jordan’s situation">
         <p>
           It has been four days since Maya was born. Taylor is
           home between shifts, and Jordan is resting while
           Maya sleeps.
         </p>
+
         <p>
           Jordan develops a <strong>severe headache</strong> that
           feels different from headaches she has had before.
           Her vision becomes blurry, and she starts seeing
           flashing spots.
         </p>
+
         <p>
           She remembers being told to watch for changes after
           birth, but she wonders whether she is simply exhausted.
         </p>
+
         <blockquote>
           “Last time I asked about pain, I felt brushed off.
           What if that happens again?”
         </blockquote>
       </section>
+
+      <img
+        src="jordan-vision.png"
+        alt="An illustration of the same apartment with clear vision on the left and blurred vision with light spots on the right."
+        class="jordan-vision-image"
+        loading="lazy"
+      >
 
       <form id="symptoms-question" class="scene-question">
         <fieldset class="scene-choices">
@@ -68,8 +83,10 @@
             <input type="radio" name="symptoms-action" value="B">
             <span>
               <strong>B.</strong> Seek emergency medical care now
-              for the severe headache and vision changes.
-              Call 911 if she feels unsafe or cannot travel safely.
+              for the severe headache and vision changes. Call 911
+              or ask Taylor to help arrange safe transportation
+              without delaying care. She should not drive herself
+              with these symptoms.
             </span>
           </label>
 
@@ -85,14 +102,19 @@
         <button type="submit" class="button">Check my choice</button>
       </form>
 
-      <section id="symptoms-feedback" class="scene-feedback"
-               aria-labelledby="symptoms-feedback-title"
-               tabindex="-1" hidden>
+      <section
+        id="symptoms-feedback"
+        class="scene-feedback"
+        aria-labelledby="symptoms-feedback-title"
+        tabindex="-1"
+        hidden
+      >
         <h2 id="symptoms-feedback-title"></h2>
         <p id="symptoms-feedback-text"></p>
       </section>
 
-      <div id="access-section" hidden>
+      <!-- Revealed after the first question -->
+      <div id="communication-section" hidden>
         <aside class="scene-encouragement">
           <p>
             <strong>Your concerns deserve to be heard.</strong>
@@ -101,57 +123,123 @@
           </p>
         </aside>
 
-        <section class="scene-part" aria-labelledby="access-heading">
-          <h2 id="access-heading">Finding care without a family doctor</h2>
+        <section
+          class="scene-part"
+          aria-labelledby="communication-heading"
+        >
+          <h2 id="communication-heading">Making her concerns heard</h2>
 
           <div class="story-bubble">
-            <p>Jordan tells Taylor what is happening.</p>
+            <p>
+              Jordan tells Taylor what is happening. They decide
+              to seek emergency medical care and arrive at the
+              emergency department. Taylor stays with Maya while
+              Jordan speaks with the triage nurse.
+            </p>
+
+            <p>
+              Jordan feels nervous. During her previous healthcare
+              visit, she did not feel listened to, and she worries
+              about explaining herself this time.
+            </p>
+
             <blockquote>
-              “I know I should get checked, but I don’t have a
-              doctor here yet. I’m not even sure where to start.”
+              “There’s so much happening.
+              What should I tell them first?”
             </blockquote>
-            <p>
-              Taylor offers to help her get emergency care and
-              contact her aunt about support with Maya.
-            </p>
-            <p>
-              Jordan worries about the disruption to Taylor’s
-              shift and their budget, but her symptoms are continuing.
-            </p>
           </div>
 
-          <form id="access-question" class="scene-question">
+          <!-- Example before the second question -->
+          <section
+            class="scene-part"
+            aria-labelledby="words-heading"
+          >
+            <h2 id="words-heading">Help Jordan explain her concern</h2>
+
+            <p>
+              What could Jordan tell the healthcare team?
+              Open the example for one way to begin.
+            </p>
+
+            <button
+              id="example-button"
+              class="button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="communication-example"
+            >
+              Show an example
+            </button>
+
+            <section
+              id="communication-example"
+              class="scene-feedback"
+              aria-labelledby="example-heading"
+              tabindex="-1"
+              hidden
+            >
+              <h3 id="example-heading">One way Jordan could say it</h3>
+
+              <blockquote class="scene-example-quote">
+                “I gave birth four days ago. I have a severe
+                headache that feels different from usual, and my
+                vision is blurry with flashing spots. I need help.”
+              </blockquote>
+
+              <p>
+                Share when you gave birth, what has changed,
+                and when it started.
+                <strong>
+                  You do not need perfect medical words to deserve care.
+                </strong>
+              </p>
+            </section>
+          </section>
+
+          <!-- Second question -->
+          <form id="communication-question" class="scene-question">
             <fieldset class="scene-choices">
               <legend>
-                Which plan best supports Jordan getting care?
+                Which information is most important for Jordan
+                to share first?
               </legend>
 
               <label class="scene-choice">
-                <input type="radio" name="access-plan" value="A" required>
+                <input
+                  type="radio"
+                  name="communication-choice"
+                  value="A"
+                  required
+                >
                 <span>
-                  <strong>A.</strong> Search for a family doctor
-                  accepting patients and wait for a new-patient
-                  appointment.
+                  <strong>A.</strong> “I recently moved here and
+                  haven’t found a family doctor.”
                 </span>
               </label>
 
               <label class="scene-choice">
-                <input type="radio" name="access-plan" value="B">
+                <input
+                  type="radio"
+                  name="communication-choice"
+                  value="B"
+                >
                 <span>
-                  <strong>B.</strong> Send a message to a parenting
-                  group and wait to hear whether others experienced
-                  the same symptoms.
+                  <strong>B.</strong> “I gave birth four days ago.
+                  I have a severe headache that feels different
+                  from usual, and my vision is blurry with
+                  flashing spots.”
                 </span>
               </label>
 
               <label class="scene-choice">
-                <input type="radio" name="access-plan" value="C">
+                <input
+                  type="radio"
+                  name="communication-choice"
+                  value="C"
+                >
                 <span>
-                  <strong>C.</strong> Get emergency care now.
-                  Taylor can help arrange a safe ride and someone
-                  to care for Maya. Do not delay care to make these
-                  arrangements. Call 911 if Jordan cannot get
-                  there safely.
+                  <strong>C.</strong> “I haven’t been sleeping
+                  much, so I think I’m probably just tired.”
                 </span>
               </label>
             </fieldset>
@@ -159,61 +247,37 @@
             <button type="submit" class="button">Check my choice</button>
           </form>
 
-          <section id="access-feedback" class="scene-feedback"
-                   aria-labelledby="access-feedback-title"
-                   tabindex="-1" hidden>
-            <h2 id="access-feedback-title"></h2>
-            <p id="access-feedback-text"></p>
+          <section
+            id="communication-feedback"
+            class="scene-feedback"
+            aria-labelledby="communication-feedback-title"
+            tabindex="-1"
+            hidden
+          >
+            <h2 id="communication-feedback-title"></h2>
+            <p id="communication-feedback-text"></p>
           </section>
         </section>
       </div>
 
-      <div id="communication-and-ending" hidden>
-        <section class="scene-part" aria-labelledby="words-heading">
-          <h2 id="words-heading">Help Jordan explain her concern</h2>
-          <p>
-            What could Jordan tell the healthcare team?
-            Open the example for one way to begin.
-          </p>
-
-          <button id="example-button"
-                  class="button"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="communication-example">
-            Show an example
-          </button>
-
-          <section id="communication-example"
-                   class="scene-feedback"
-                   aria-labelledby="example-heading"
-                   tabindex="-1" hidden>
-            <h3 id="example-heading">One way Jordan could say it</h3>
-            <blockquote class="scene-example-quote">
-              “I gave birth four days ago. I have a severe
-              headache that feels different from usual, and my
-              vision is blurry with flashing spots. I need help.”
-            </blockquote>
-            <p>
-              Share when you gave birth, what has changed, and
-              when it started.
-              <strong>
-                You do not need perfect medical words to deserve care.
-              </strong>
-            </p>
-          </section>
-        </section>
-
-        <section class="scene-ending" aria-labelledby="ending-heading">
+      <!-- Revealed after the second question -->
+      <section
+        id="scene-ending"
+        class="scene-ending"
+        aria-labelledby="ending-heading"
+        hidden
+      >
+        <div class="respectful-care-panel">
           <h2 id="ending-heading">Respectful care includes listening.</h2>
 
           <div class="scene-illustrated">
-            <div class="story-bubble">
+            <div>
               <p>
                 Jordan receives emergency assessment. The nurse
                 listens without interrupting, acknowledges her
                 concerns, and explains what will happen next.
               </p>
+
               <p>
                 Jordan tells the nurse about her previous
                 experience of feeling dismissed. The nurse
@@ -223,24 +287,26 @@
               </p>
             </div>
 
-            <img src="jordan-nurse.png"
-                 alt="Jordan speaking with a nurse who listens attentively."
-                 class="scene-conversation"
-                 loading="lazy">
+            <img
+              src="jordan-nurse.png"
+              alt="Jordan speaking with a nurse who listens attentively."
+              class="scene-conversation"
+              loading="lazy"
+            >
           </div>
+        </div>
 
-          <p>
-            After assessment and treatment, Jordan begins
-            discussing her next steps with the healthcare team.
-            She wants to understand the plan—and what to do
-            if she feels unheard again.
-          </p>
+        <p>
+          After assessment and treatment, Jordan begins discussing
+          her next steps with the healthcare team. She wants to
+          understand the plan and what to do if she feels unheard again.
+        </p>
 
-          <a class="button" href="jordan-scene2.html">
-            Continue to Scene 2 <span aria-hidden="true">&rarr;</span>
-          </a>
-        </section>
-      </div>
+        <a class="button" href="jordan-scene2.html">
+          Continue to Scene 2
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </section>
 
       <aside class="scene-sources" aria-label="Sources for this scene">
         <p>
@@ -253,17 +319,23 @@
         </p>
       </aside>
 
-      <p><a href="jordan.html">&larr; Back to Jordan’s introduction</a></p>
+      <p>
+        <a href="jordan.html">&larr; Back to Jordan’s introduction</a>
+      </p>
     </article>
   </main>
 
   <footer>
-    <p>Home After Birth &middot; NURS 4P16 learning project</p>
+    <p>
+      Baby Steps at Home &middot;
+      A NURS 4P16 Learning Objective Project
+    </p>
   </footer>
 
   <script>
     const symptomsForm = document.getElementById("symptoms-question");
-    const accessForm = document.getElementById("access-question");
+    const communicationForm =
+      document.getElementById("communication-question");
     const exampleButton = document.getElementById("example-button");
 
     symptomsForm.addEventListener("submit", function (event) {
@@ -279,34 +351,40 @@
 
       document.getElementById("symptoms-feedback-text").textContent =
         correct
-          ? "A severe or unusual headache with vision changes after birth can signal a serious complication, including postpartum preeclampsia—a condition involving high blood pressure. Jordan does not need to know the cause before seeking care. With these symptoms, she should not drive herself. Call 911 if she feels unsafe or cannot travel safely."
-          : "Exhaustion should not be assumed to explain a severe headache with new vision changes. Jordan needs immediate assessment and should not wait until tomorrow or until she has a regular family doctor. She should not drive herself. Call 911 if she feels unsafe or cannot travel safely.";
+          ? "A severe or unusual headache with vision changes after birth can signal a serious complication, including postpartum preeclampsia, which is a condition involving high blood pressure. Jordan does not need to know the cause before seeking care. With these symptoms, she should not drive herself. Call 911 or have Taylor help arrange safe transportation without delaying care. Call 911 if safe transportation is not immediately available."
+          : "Exhaustion should not be assumed to explain a severe headache with new vision changes. Jordan needs immediate assessment and should not wait until tomorrow or until she has a regular family doctor. She should not drive herself. Call 911 or have Taylor help arrange safe transportation without delaying care. Call 911 if safe transportation is not immediately available.";
 
       const feedback = document.getElementById("symptoms-feedback");
+
       feedback.hidden = false;
-      document.getElementById("access-section").hidden = false;
+      document.getElementById("communication-section").hidden = false;
+
       feedback.focus();
     });
 
-    accessForm.addEventListener("submit", function (event) {
+    communicationForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const choice = new FormData(accessForm).get("access-plan");
-      const correct = choice === "C";
+      const choice =
+        new FormData(communicationForm).get("communication-choice");
+      const correct = choice === "B";
 
-      document.getElementById("access-feedback-title").textContent =
+      document.getElementById("communication-feedback-title").textContent =
         correct
-          ? "Jordan can access emergency care without a regular family doctor."
-          : "Finding ongoing care and hearing others’ experiences can wait.";
+          ? "Start with what has changed and when you gave birth."
+          : "Those details can help, but start with the symptoms and recent birth.";
 
-      document.getElementById("access-feedback-text").textContent =
+      document.getElementById("communication-feedback-text").textContent =
         correct
-          ? "Her symptoms determine how urgently she needs care. Finding a primary care provider is important for ongoing support, but it should not delay emergency assessment. Taylor can help with practical arrangements while Jordan gets the care she needs."
-          : "Neither replaces immediate assessment of Jordan’s severe headache and vision changes. She does not need a family doctor’s referral to attend an emergency department. Get emergency care now, and call 911 if she cannot travel safely.";
+          ? "Jordan clearly describes her symptoms and recent birth. She can also explain when the symptoms started and whether they are getting worse. She does not need to know the diagnosis or use medical words. Taylor can help her remember details if she wants."
+          : "Jordan’s sleep and difficulty finding a family doctor are worth discussing. However, the nurse first needs to hear about her severe headache, vision changes, and when she gave birth. Jordan can describe what she feels without deciding what is causing it.";
 
-      const feedback = document.getElementById("access-feedback");
+      const feedback =
+        document.getElementById("communication-feedback");
+
       feedback.hidden = false;
-      document.getElementById("communication-and-ending").hidden = false;
+      document.getElementById("scene-ending").hidden = false;
+
       feedback.focus();
     });
 
@@ -316,6 +394,7 @@
 
       example.hidden = !opening;
       exampleButton.setAttribute("aria-expanded", String(opening));
+
       exampleButton.textContent =
         opening ? "Hide the example" : "Show an example";
 
