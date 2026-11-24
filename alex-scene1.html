@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Something feels different | Home After Birth</title>
+
+  <title>Something feels different | Baby Steps at Home</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="site-name" href="index.html">Home After Birth</a>
+    <a class="site-name" href="index.html">Baby Steps at Home</a>
+
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="characters.html">Characters</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html#how-to-play">How to play</a>
+      <a href="index.html#about">About this project</a>
     </nav>
   </header>
 
@@ -30,35 +34,51 @@
         <p>This activity needs JavaScript enabled to check your choices.</p>
       </noscript>
 
-      <section class="story-bubble" aria-label="Alex’s situation">
-        <p>
-          It is Alex’s fourth day at home after giving birth.
-          Sam is at work, and Wren is sleeping nearby.
-        </p>
-        <p>
-          Alex notices that her bleeding has suddenly become much
-          heavier. She has soaked a full maternity pad in
-          <strong>30 minutes</strong>. When she stands, she feels
-          dizzy and thinks she might faint.
-        </p>
-        <p>
-          She remembers being told to expect bleeding after birth,
-          but this feels different.
-        </p>
-        <blockquote>
-          “Is this part of recovery, or do I need help?”
-        </blockquote>
-      </section>
+      <div class="alex-scene-opening">
+        <section class="story-bubble" aria-label="Alex’s situation">
+          <p>
+            Alex has been home for four days after giving birth to
+            Wren. Sam is now at work, and Wren is sleeping nearby.
+          </p>
+
+          <p>
+            When Alex uses the bathroom, she notices that her bleeding
+            has suddenly become much heavier. She has soaked a full
+            maternity pad in <strong>30 minutes</strong>, and when
+            she stands, she feels dizzy and thinks she might faint.
+          </p>
+
+          <p>
+            She remembers being told by the nurses to expect some
+            bleeding after birth, but this feels different.
+          </p>
+
+          <blockquote>
+            “Is this part of a normal recovery, or do I need help?”
+          </blockquote>
+        </section>
+
+        <img
+          src="alex-faint.png"
+          alt="Alex looking pale, sweaty, and unwell."
+          class="alex-faint-portrait"
+        >
+      </div>
 
       <form id="question-one" class="scene-question">
         <fieldset class="scene-choices">
           <legend>What should Alex do first?</legend>
 
           <label class="scene-choice">
-            <input type="radio" name="first-action" value="A" required>
+            <input
+              type="radio"
+              name="first-action"
+              value="A"
+              required
+            >
             <span>
               <strong>A.</strong> Put on a fresh pad, rest, and see
-              whether the bleeding slows over the next few hours.
+              if the bleeding slows over the next few hours.
             </span>
           </label>
 
@@ -73,8 +93,8 @@
           <label class="scene-choice">
             <input type="radio" name="first-action" value="C">
             <span>
-              <strong>C.</strong> Send her healthcare provider a
-              routine message and wait for a reply.
+              <strong>C.</strong> Send a routine message to her
+              family doctor or nurse practitioner and wait for a reply.
             </span>
           </label>
         </fieldset>
@@ -82,61 +102,83 @@
         <button type="submit" class="button">Check my choice</button>
       </form>
 
-      <section id="feedback-one" class="scene-feedback"
-               aria-labelledby="feedback-one-title" tabindex="-1" hidden>
+      <section
+        id="feedback-one"
+        class="scene-feedback"
+        aria-labelledby="feedback-one-title"
+        tabindex="-1"
+        hidden
+      >
         <h2 id="feedback-one-title"></h2>
         <p id="feedback-one-text"></p>
       </section>
 
-      <section id="barrier-section" class="scene-part"
-               aria-labelledby="barrier-heading" hidden>
-
-        <h2 id="barrier-heading">Getting help when it feels difficult</h2>
+      <section
+        id="barrier-section"
+        class="scene-part"
+        aria-labelledby="barrier-heading"
+        hidden
+      >
+        <h2 id="barrier-heading">
+          Getting help when it feels difficult
+        </h2>
 
         <div class="scene-illustrated">
           <div class="story-bubble">
             <p>Alex reaches for her phone, then hesitates.</p>
+
             <blockquote>
               “Sam has the car. What will happen with Wren?
               I don’t want to cause a fuss if I’m wrong.”
             </blockquote>
+
             <p>
-              Her sister lives too far away to arrive quickly,
-              but her neighbour has offered to help.
+              Her sister, Sarah, lives too far away to arrive quickly,
+              but her neighbour, Lisa, has offered to help.
             </p>
           </div>
 
-          <img src="car.png" alt="" class="scene-car" loading="lazy">
+          <img
+            src="car.png"
+            alt=""
+            class="scene-car"
+            loading="lazy"
+          >
         </div>
 
         <form id="question-two" class="scene-question">
           <fieldset class="scene-choices">
             <legend>
-              Which plan supports Alex getting help safely?
+              Which plan supports Alex getting help quickly?
             </legend>
 
             <label class="scene-choice">
-              <input type="radio" name="support-plan" value="A" required>
+              <input
+                type="radio"
+                name="support-plan"
+                value="A"
+                required
+              >
               <span>
-                <strong>A.</strong> Wait until Sam can bring the car
-                home before seeking care.
+                <strong>A.</strong> Wait until Sam can bring the
+                car home before seeking care.
               </span>
             </label>
 
             <label class="scene-choice">
               <input type="radio" name="support-plan" value="B">
               <span>
-                <strong>B.</strong> Call her neighbour first and decide
-                whether to seek care after they arrive.
+                <strong>B.</strong> First, call her neighbour.
+                Then, when she arrives, decide whether to seek care.
               </span>
             </label>
 
             <label class="scene-choice">
               <input type="radio" name="support-plan" value="C">
               <span>
-                <strong>C.</strong> Call 911 immediately, explain that
-                she is alone with her newborn, and follow the
-                dispatcher’s instructions. Arrange support if she can do so without delaying help.
+                <strong>C.</strong> Call 911 immediately, explain
+                that she is alone with her newborn, and follow
+                the dispatcher’s instructions.
               </span>
             </label>
           </fieldset>
@@ -144,32 +186,52 @@
           <button type="submit" class="button">Check my choice</button>
         </form>
 
-        <section id="feedback-two" class="scene-feedback"
-                 aria-labelledby="feedback-two-title" tabindex="-1" hidden>
+        <section
+          id="feedback-two"
+          class="scene-feedback"
+          aria-labelledby="feedback-two-title"
+          tabindex="-1"
+          hidden
+        >
           <h2 id="feedback-two-title"></h2>
           <p id="feedback-two-text"></p>
         </section>
       </section>
 
-      <section id="scene-ending" class="scene-ending"
-               aria-labelledby="ending-heading" hidden>
+      <section
+        id="scene-ending"
+        class="scene-ending"
+        aria-labelledby="ending-heading"
+        hidden
+      >
         <div class="scene-takeaway">
           <h2 id="ending-heading">Your recovery matters, too.</h2>
+
           <p>
-            You do not need to know the diagnosis before asking for
-            help. Describe what is happening and tell the healthcare
-            team that you recently gave birth.
+            You do not need to know the diagnosis before asking
+            for help. Describe what is happening and tell the
+            healthcare team that you recently had a baby, along
+            with any other important medical details.
           </p>
         </div>
 
+        <img
+          src="ambulance-icon.png"
+          alt=""
+          class="scene-ambulance-icon"
+          loading="lazy"
+        >
+
         <p>
-          Alex calls 911 and receives emergency assessment and
-          treatment. Later, as she prepares to return home, she wants
-          to make sure she understands the instructions she is given.
+          Alex calls 911, goes to the hospital, and receives
+          emergency assessment and treatment. A few days later,
+          as she prepares to return home, she wants to make
+          sure she understands the instructions she is given.
         </p>
 
         <a class="button" href="alex-scene2.html">
-          Continue to Scene 2 <span aria-hidden="true">&rarr;</span>
+          Continue to Scene 2
+          <span aria-hidden="true">&rarr;</span>
         </a>
       </section>
 
@@ -183,12 +245,17 @@
         </p>
       </aside>
 
-      <p><a href="alex.html">&larr; Back to Alex’s introduction</a></p>
+      <p>
+        <a href="alex.html">&larr; Back to Alex’s introduction</a>
+      </p>
     </article>
   </main>
 
   <footer>
-    <p>Home After Birth &middot; NURS 4P16 learning project</p>
+    <p>
+      Baby Steps at Home &middot;
+      A NURS 4P16 Learning Objective Project
+    </p>
   </footer>
 
   <script>
@@ -209,11 +276,13 @@
       document.getElementById("feedback-one-text").textContent =
         correct
           ? "Soaking a pad this quickly, especially with dizziness or feeling faint, can signal dangerous blood loss. Alex should call 911 now and should not drive herself. Ontario hospital guidance identifies soaking a pad in less than an hour as a reason to call 911 or seek emergency care immediately."
-          : "Although bleeding occurs after birth, soaking a pad in 30 minutes and feeling faint are warning signs. Resting or sending a routine message does not replace emergency assessment. Alex should call 911 now and should not drive herself.";
+          : "Some bleeding can continue for several weeks after birth, but soaking a pad in 30 minutes and feeling faint are warning signs. Resting or sending a routine message does not replace an emergency assessment. Alex should call 911 now to get emergency care at the hospital. She should not drive herself.";
 
       const feedback = document.getElementById("feedback-one");
+
       feedback.hidden = false;
       document.getElementById("barrier-section").hidden = false;
+
       feedback.focus();
     });
 
@@ -230,12 +299,14 @@
 
       document.getElementById("feedback-two-text").textContent =
         correct
-          ? "Alex can tell the dispatcher about both her symptoms and her situation at home. She does not need to solve transportation and support arrangements before making the call. Her neighbour and Sam may be able to help, but contacting them should not delay emergency care."
+          ? "Alex can tell the dispatcher about both her symptoms and her situation at home. She does not need to solve transportation and support arrangements before making the call. Lisa and Sam may be able to help, but contacting them should not delay emergency care."
           : "Waiting for someone to arrive could delay emergency care. The safest first step in this situation is to call 911 and explain that she is alone with her newborn. She can follow the dispatcher’s instructions and arrange support without delaying help.";
 
       const feedback = document.getElementById("feedback-two");
+
       feedback.hidden = false;
       document.getElementById("scene-ending").hidden = false;
+
       feedback.focus();
     });
   </script>
