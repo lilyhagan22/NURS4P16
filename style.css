@@ -1414,3 +1414,11 @@ button.button:focus-visible {
     padding: 22px;
   }
 }
+
+/* Center the warning’s text block while keeping text left aligned */
+.centered-warning > p {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  text-align: left;
+}
