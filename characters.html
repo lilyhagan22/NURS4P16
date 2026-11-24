@@ -20,12 +20,18 @@
 
   <main id="main">
     <section class="character-section" aria-labelledby="character-heading">
-      <p class="eyebrow">Your adventure starts here</p>
-      <h1 id="character-heading">Meet your character</h1>
-      <p class="character-introduction">
-        Choose a parent to follow through their first week at home.
-        You can return and explore the other story later.
-      </p>
+      <div class="character-welcome">
+        <img src="houseplant.png" alt="" class="character-welcome-image">
+
+        <div>
+          <p class="eyebrow">Your adventure starts here</p>
+          <h1 id="character-heading">Meet your character</h1>
+          <p class="character-introduction">
+            Choose a parent to follow through their first week at home.
+            You can return and explore the other story later.
+          </p>
+        </div>
+      </div>
 
       <form id="character-form" action="alex.html" method="get">
         <fieldset class="character-options">
@@ -67,16 +73,12 @@
           individual experiences, not everyone’s experience.
         </p>
 
-                <div class="character-bottom">
-          <img src="houseplant.png" alt="" class="character-decoration">
-
-          <div class="character-actions">
-            <button class="button" type="submit">
-              Continue <span aria-hidden="true">&rarr;</span>
-            </button>
-            <a href="index.html">Back to home</a>
-          </div>
-        </div>
+                 <div class="character-actions">
+          <button class="button" type="submit">
+            Continue <span aria-hidden="true">&rarr;</span>
+          </button>
+          <a href="index.html">Back to home</a>
+        </div>       
       </form>
     </section>
   </main>
