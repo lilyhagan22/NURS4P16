@@ -1236,3 +1236,38 @@ button.button:focus-visible {
 .home-page .about {
   padding-top: 30px;
 }
+
+/* Larger illustration beside the character introduction */
+.character-welcome {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 30px;
+}
+
+.character-welcome-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.character-welcome .eyebrow {
+  margin-top: 0;
+}
+
+.character-welcome .character-introduction {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .character-welcome {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .character-welcome-image {
+    max-width: 280px;
+  }
+}
