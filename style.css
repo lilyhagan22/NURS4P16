@@ -1280,3 +1280,31 @@ button.button:focus-visible {
     max-width: 280px;
   }
 }
+
+/* Shared site heading and orange introductory text */
+.site-name {
+  font-size: clamp(25px, 3vw, 30px);
+  line-height: 1.25;
+}
+
+.eyebrow {
+  font-size: 18px;
+}
+
+/* Character introduction cards */
+.profile-bubble {
+  border: 2px solid var(--teal);
+}
+
+.profile-bubble h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile-card-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin: 0 auto 22px;
+}
