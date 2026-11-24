@@ -1385,3 +1385,32 @@ button.button:focus-visible {
 .alex-mood-emergency {
   margin-top: 40px;
 }
+
+/* Center the comparison image below Jordan’s opening story */
+.jordan-vision-image {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 28px auto;
+  border-radius: 20px;
+}
+
+/* Bordered panel for the respectful-care ending */
+.respectful-care-panel {
+  padding: 28px;
+  background: var(--sage);
+  border: 2px solid var(--teal);
+  border-radius: 24px;
+}
+
+.respectful-care-panel > h2 {
+  margin-top: 0;
+  color: var(--teal);
+}
+
+@media (max-width: 600px) {
+  .respectful-care-panel {
+    padding: 22px;
+  }
+}
