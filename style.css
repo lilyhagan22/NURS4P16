@@ -1237,16 +1237,22 @@ button.button:focus-visible {
   padding-top: 30px;
 }
 
-/* Larger illustration beside the character introduction */
+/* Introduction on the left; plant beneath navigation on the right */
 .character-welcome {
   display: grid;
-  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  grid-template-areas: "text plant";
   align-items: center;
   gap: 35px;
   margin-bottom: 30px;
 }
 
+.character-welcome > div {
+  grid-area: text;
+}
+
 .character-welcome-image {
+  grid-area: plant;
   display: block;
   width: 100%;
   height: auto;
@@ -1264,6 +1270,9 @@ button.button:focus-visible {
 @media (max-width: 800px) {
   .character-welcome {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "plant";
     gap: 20px;
   }
 
