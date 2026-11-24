@@ -1308,3 +1308,39 @@ button.button:focus-visible {
   object-fit: contain;
   margin: 0 auto 22px;
 }
+
+/* Alex: Scene 1 opening story and portrait */
+.alex-scene-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: center;
+  gap: 28px;
+}
+
+.alex-faint-portrait {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Ambulance between the recovery message and story transition */
+.scene-ambulance-icon {
+  display: block;
+  width: 80px;
+  height: auto;
+  margin: 28px auto;
+}
+
+/* Stack the opening story and portrait on smaller screens */
+@media (max-width: 750px) {
+  .alex-scene-opening {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .alex-faint-portrait {
+    max-width: 230px;
+  }
+}
