@@ -1371,3 +1371,17 @@ button.button:focus-visible {
   height: auto;
   flex-shrink: 0;
 }
+
+/* Center each emotional-health icon inside its comparison box */
+.mood-condition-icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 22px;
+}
+
+/* Space above the relocated emergency information */
+.alex-mood-emergency {
+  margin-top: 40px;
+}
