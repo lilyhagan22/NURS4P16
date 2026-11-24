@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>More than feeling tired | Home After Birth</title>
+
+  <title>More than feeling tired | Baby Steps at Home</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="site-name" href="index.html">Home After Birth</a>
+    <a class="site-name" href="index.html">Baby Steps at Home</a>
+
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="characters.html">Characters</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html#how-to-play">How to play</a>
+      <a href="index.html#about">About this project</a>
     </nav>
   </header>
 
@@ -26,47 +30,153 @@
         <h1 id="scene-heading">More than feeling tired</h1>
       </header>
 
-      <aside class="scene-emergency" aria-labelledby="emergency-heading">
-        <h2 id="emergency-heading">When help cannot wait</h2>
-        <p>
-          If someone may act on thoughts of harming themselves or
-          their baby, or anyone is in immediate danger,
-          <strong>call 911</strong>. Do not leave them alone while
-          arranging emergency help.
-        </p>
-        <p>
-          Possible postpartum psychosis also needs immediate
-          emergency assessment. Do not wait for a routine appointment.
-        </p>
-      </aside>
-
       <noscript>
         <p>This activity needs JavaScript enabled to check your choices.</p>
       </noscript>
 
+      <!-- Alex’s opening scenario -->
       <section class="story-bubble" aria-label="Alex’s situation">
         <p>
           It has been one week since Wren was born. Alex is
           following her physical recovery plan, but emotionally,
           things feel difficult.
         </p>
+
         <p>
           For several days, she has felt sad and overwhelmed for
           much of the day. Things she usually enjoys feel
           uninteresting. Even when Sam cares for Wren, she
           struggles to relax or sleep.
         </p>
+
         <p>
           Alex feels guilty because she expected to feel happier.
           These feelings are making it difficult to manage
           everyday tasks.
         </p>
+
         <blockquote>
           “Everyone says the first week is emotional.
           Am I supposed to just push through?”
         </blockquote>
       </section>
 
+      <!-- Comparison section before the questions -->
+      <section class="scene-part" aria-labelledby="comparison-heading">
+        <h2 id="comparison-heading">Explore the differences</h2>
+
+        <p>
+          Open each bubble to learn more.
+          These descriptions do not diagnose a condition.
+        </p>
+
+        <div class="mood-comparisons">
+
+          <details class="mood-bubble">
+            <summary>Postpartum blues</summary>
+
+            <div class="mood-bubble-content">
+              <img
+                src="blues-icon.png"
+                alt=""
+                class="mood-condition-icon"
+                loading="lazy"
+              >
+
+              <h3>What might it look like?</h3>
+              <p>
+                Tearfulness, mood changes, irritability, or feeling
+                overwhelmed in the first few days after birth.
+              </p>
+
+              <h3>What is the usual pattern?</h3>
+              <p>
+                Symptoms are generally mild and improve within
+                about two weeks.
+              </p>
+
+              <h3>What should happen?</h3>
+              <p>
+                Offer reassurance, practical help, and opportunities
+                for rest. Seek professional advice if symptoms worsen,
+                interfere with daily life, or continue beyond two weeks.
+                <strong>You can ask for help sooner.</strong>
+              </p>
+            </div>
+          </details>
+
+          <details class="mood-bubble">
+            <summary>Postpartum depression</summary>
+
+            <div class="mood-bubble-content">
+              <img
+                src="depression-icon.png"
+                alt=""
+                class="mood-condition-icon"
+                loading="lazy"
+              >
+
+              <h3>What might it look like?</h3>
+              <p>
+                Persistent sadness, loss of interest, hopelessness,
+                guilt, or difficulty managing daily activities.
+              </p>
+
+              <h3>What is the usual pattern?</h3>
+              <p>
+                Symptoms are more intense or persistent than
+                postpartum blues. Depression may begin during
+                pregnancy or after birth; it is not limited to
+                the first few weeks.
+              </p>
+
+              <h3>What should happen?</h3>
+              <p>
+                Contact a healthcare professional for assessment.
+                Treatment can include counselling, practical and
+                social support, and medication when appropriate.
+              </p>
+            </div>
+          </details>
+
+          <details class="mood-bubble">
+            <summary>Postpartum psychosis</summary>
+
+            <div class="mood-bubble-content">
+              <img
+                src="psychosis-icon.png"
+                alt=""
+                class="mood-condition-icon"
+                loading="lazy"
+              >
+
+              <h3>What might it look like?</h3>
+              <p>
+                Hearing or seeing things others do not, unusual beliefs
+                disconnected from reality, severe confusion, or marked
+                changes in behaviour.
+              </p>
+
+              <h3>What is the usual pattern?</h3>
+              <p>
+                It can begin suddenly, often early after birth,
+                and worsen quickly.
+              </p>
+
+              <h3>What should happen?</h3>
+              <p>
+                <strong>Seek emergency medical care immediately.</strong>
+                A trusted adult should stay with the person and ensure
+                another adult cares for the baby. Call 911 if there is
+                immediate danger or safe transport cannot be arranged.
+              </p>
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- First question -->
       <form id="mood-question" class="scene-question">
         <fieldset class="scene-choices">
           <legend>
@@ -102,12 +212,18 @@
         <button type="submit" class="button">Check my choice</button>
       </form>
 
-      <section id="mood-feedback" class="scene-feedback"
-               aria-labelledby="mood-feedback-title" tabindex="-1" hidden>
+      <section
+        id="mood-feedback"
+        class="scene-feedback"
+        aria-labelledby="mood-feedback-title"
+        tabindex="-1"
+        hidden
+      >
         <h2 id="mood-feedback-title"></h2>
         <p id="mood-feedback-text"></p>
       </section>
 
+      <!-- Revealed after the first question -->
       <div id="next-step-section" hidden>
         <aside class="scene-encouragement">
           <p>
@@ -125,19 +241,25 @@
                 Alex considers telling someone, but worries
                 about being judged.
               </p>
+
               <blockquote>
                 “What if they think I’m not a good mother?
                 Sam is already tired, and getting to another
                 appointment will be difficult.”
               </blockquote>
+
               <p>
                 Sam notices that she seems withdrawn and asks
                 how she is feeling.
               </p>
             </div>
 
-            <img src="phone.png" alt=""
-                 class="scene-phone" loading="lazy">
+            <img
+              src="phone.png"
+              alt=""
+              class="scene-phone"
+              loading="lazy"
+            >
           </div>
 
           <form id="support-question" class="scene-question">
@@ -174,98 +296,71 @@
             <button type="submit" class="button">Check my choice</button>
           </form>
 
-          <section id="support-feedback" class="scene-feedback"
-                   aria-labelledby="support-feedback-title"
-                   tabindex="-1" hidden>
+          <section
+            id="support-feedback"
+            class="scene-feedback"
+            aria-labelledby="support-feedback-title"
+            tabindex="-1"
+            hidden
+          >
             <h2 id="support-feedback-title"></h2>
             <p id="support-feedback-text"></p>
+          </section>
+
+          <!-- Closing message directly below the second feedback -->
+          <section
+            id="scene-ending"
+            class="scene-ending"
+            aria-labelledby="ending-heading"
+            hidden
+          >
+            <div class="scene-takeaway">
+              <h2 id="ending-heading">
+                Asking for support is part of caring for yourself.
+              </h2>
+
+              <p>
+                Alex tells Sam how she has been feeling and contacts
+                her healthcare professional. Together, they begin a
+                plan for assessment, treatment if needed, and support
+                at home.
+              </p>
+
+              <p>
+                Her feelings do not disappear immediately, but she
+                has taken a step toward getting care.
+              </p>
+            </div>
+
+            <div class="profile-actions">
+              <a class="button" href="finish.html">
+                Check what you’ve learned
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </section>
         </section>
       </div>
 
-      <section class="scene-part" aria-labelledby="comparison-heading">
-        <h2 id="comparison-heading">Explore the differences</h2>
-        <p>Open each bubble to learn more. These descriptions do not diagnose a condition.</p>
+      <!-- Emergency information remains visible near the bottom -->
+      <aside
+        class="scene-emergency alex-mood-emergency"
+        aria-labelledby="emergency-heading"
+      >
+        <h2 id="emergency-heading">When help cannot wait</h2>
 
-        <div class="mood-comparisons">
-          <details class="mood-bubble">
-            <summary>Postpartum blues</summary>
-            <div class="mood-bubble-content">
-              <h3>What might it look like?</h3>
-              <p>
-                Tearfulness, mood changes, irritability, or feeling
-                overwhelmed in the first few days after birth.
-              </p>
+        <p>
+          If someone may act on thoughts of harming themselves or
+          their baby, or if anyone is in immediate danger,
+          <strong>call 911</strong>. Do not leave them alone while
+          arranging emergency help.
+        </p>
 
-              <h3>What is the usual pattern?</h3>
-              <p>
-                Symptoms are generally mild and improve within
-                about two weeks.
-              </p>
-
-              <h3>What should happen?</h3>
-              <p>
-                Offer reassurance, practical help, and opportunities
-                for rest. Seek professional advice if symptoms worsen,
-                interfere with daily life, or continue beyond two weeks.
-                <strong>You can ask for help sooner.</strong>
-              </p>
-            </div>
-          </details>
-
-          <details class="mood-bubble">
-            <summary>Postpartum depression</summary>
-            <div class="mood-bubble-content">
-              <h3>What might it look like?</h3>
-              <p>
-                Persistent sadness, loss of interest, hopelessness,
-                guilt, or difficulty managing daily activities.
-              </p>
-
-              <h3>What is the usual pattern?</h3>
-              <p>
-                Symptoms are more intense or persistent than
-                postpartum blues. Depression may begin during
-                pregnancy or after birth; it is not limited to
-                the first few weeks.
-              </p>
-
-              <h3>What should happen?</h3>
-              <p>
-                Contact a healthcare professional for assessment.
-                Treatment can include counselling, practical and
-                social support, and medication when appropriate.
-              </p>
-            </div>
-          </details>
-
-          <details class="mood-bubble">
-            <summary>Postpartum psychosis</summary>
-            <div class="mood-bubble-content">
-              <h3>What might it look like?</h3>
-              <p>
-                Hearing or seeing things others do not, unusual beliefs
-                disconnected from reality, severe confusion, or marked
-                changes in behaviour.
-              </p>
-
-              <h3>What is the usual pattern?</h3>
-              <p>
-                It can begin suddenly, often early after birth,
-                and worsen quickly.
-              </p>
-
-              <h3>What should happen?</h3>
-              <p>
-                <strong>Seek emergency medical care immediately.</strong>
-                A trusted adult should stay with the person and ensure
-                another adult cares for the baby. Call 911 if there is
-                immediate danger or safe transport cannot be arranged.
-              </p>
-            </div>
-          </details>
-        </div>
-      </section>
+        <p>
+          Possible postpartum psychosis needs immediate emergency
+          assessment. Do not wait for a routine appointment.
+        </p>
+      </aside>
 
       <section class="scene-part" aria-labelledby="resources-heading">
         <h2 id="resources-heading">Finding support</h2>
@@ -288,7 +383,8 @@
               emergency care.
             </p>
             <a href="https://health811.ontario.ca/">
-              Visit Health811 <span aria-hidden="true">&rarr;</span>
+              Visit Health811
+              <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
 
@@ -301,35 +397,10 @@
               These services do not replace emergency care.
             </p>
             <a href="https://niagararegion.ca/parents/contact.aspx">
-              Visit Niagara Parents <span aria-hidden="true">&rarr;</span>
+              Visit Niagara Parents
+              <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
-        </div>
-      </section>
-
-      <section id="scene-ending" class="scene-ending"
-               aria-labelledby="ending-heading" hidden>
-        <div class="scene-takeaway">
-          <h2 id="ending-heading">
-            Asking for support is part of caring for yourself.
-          </h2>
-          <p>
-            Alex tells Sam how she has been feeling and contacts
-            her healthcare professional. Together, they begin a
-            plan for assessment, treatment if needed, and support
-            at home.
-          </p>
-          <p>
-            Her feelings do not disappear immediately, but she
-            has taken a step toward getting care.
-          </p>
-        </div>
-
-        <div class="profile-actions">
-          <a class="button" href="finish.html">
-            Check what you’ve learned
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </section>
 
@@ -345,12 +416,17 @@
         </p>
       </aside>
 
-      <p><a href="alex-scene2.html">&larr; Back to Scene 2</a></p>
+      <p>
+        <a href="alex-scene2.html">&larr; Back to Scene 2</a>
+      </p>
     </article>
   </main>
 
   <footer>
-    <p>Home After Birth &middot; NURS 4P16 learning project</p>
+    <p>
+      Baby Steps at Home &middot;
+      A NURS 4P16 Learning Objective Project
+    </p>
   </footer>
 
   <script>
@@ -378,14 +454,19 @@
       const choice = new FormData(moodForm).get("mood-concern");
       const response = moodResponses[choice];
 
+      if (!response) return;
+
       document.getElementById("mood-feedback-title").textContent =
         response.title;
+
       document.getElementById("mood-feedback-text").textContent =
         response.text;
 
       const feedback = document.getElementById("mood-feedback");
+
       feedback.hidden = false;
       document.getElementById("next-step-section").hidden = false;
+
       feedback.focus();
     });
 
@@ -406,8 +487,10 @@
           : "Rest and support may help, but they should not replace assessment when symptoms are distressing or affecting daily life. Alex should contact her healthcare professional promptly rather than wait for a routine appointment.";
 
       const feedback = document.getElementById("support-feedback");
+
       feedback.hidden = false;
       document.getElementById("scene-ending").hidden = false;
+
       feedback.focus();
     });
   </script>
