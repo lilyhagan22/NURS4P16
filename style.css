@@ -1344,3 +1344,30 @@ button.button:focus-visible {
     max-width: 230px;
   }
 }
+
+/* Question mark below the discharge instructions */
+.scene-question-icon {
+  display: block;
+  width: 65px;
+  height: auto;
+  margin: 22px auto;
+}
+
+/* Border around Alex’s follow-up story */
+.follow-up-story-box {
+  border: 2px solid var(--teal);
+}
+
+/* Speech bubble beside the optional practice heading */
+.practice-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.practice-speech-icon {
+  display: block;
+  width: 42px;
+  height: auto;
+  flex-shrink: 0;
+}
