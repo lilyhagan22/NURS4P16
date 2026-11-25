@@ -7,6 +7,135 @@
   <title>More than feeling tired | Baby Steps at Home</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Comparison cards: styles apply only to this page’s new cards. */
+    .mood-flip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+      align-items: start;
+    }
+    .mood-flip-card { min-width: 0; perspective: 1000px; }
+    .mood-card-panel {
+      padding: 25px 20px;
+      border: 2px solid var(--teal);
+      border-radius: 24px;
+      background: var(--sage);
+      overflow-wrap: anywhere;
+      animation: mood-card-turn 260ms ease-out;
+    }
+    .mood-card-panel[hidden] { display: none; }
+    .mood-card-front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 420px;
+    }
+    .mood-flip-icon {
+      display: block;
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin: 0 auto 20px;
+    }
+    .mood-card-panel h3 {
+      margin: 0 0 20px;
+      color: var(--teal);
+      font-size: 24px;
+      line-height: 1.35;
+    }
+    .mood-card-front h3 {
+      min-height: 2.7em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mood-card-front .mood-card-stat {
+      margin: 0 0 15px;
+      color: var(--teal);
+      font-size: clamp(30px, 3.9vw, 40px);
+      font-weight: bold;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .mood-card-panel .mood-card-citation {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 22px;
+    }
+    .mood-turn-button {
+      width: 100%;
+      margin-top: auto;
+      font-size: 17px;
+      padding: 12px 16px;
+    }
+    .mood-card-back { background: #f0f4ef; }
+    .mood-card-back > h3 {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--accent);
+    }
+    .mood-card-back h4 {
+      margin: 22px 0 8px;
+      color: var(--teal);
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .mood-card-back p { margin: 0 0 16px; font-size: 16px; }
+    .mood-card-back > h3:focus {
+      outline: 2px solid var(--teal);
+      outline-offset: 5px;
+    }
+    .mood-return-button {
+      display: block;
+      width: 100%;
+      padding: 8px 0;
+      border: 0;
+      background: transparent;
+      color: var(--teal);
+      font: inherit;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      cursor: pointer;
+    }
+    .mood-return-button:focus-visible,
+    .mood-turn-button:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 4px;
+    }
+    .mood-statistics-note { margin-top: 25px; font-size: 15px; }
+    .mood-statistics-note p:last-child { color: var(--teal); font-size: 18px; }
+    .mood-screen-reader {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+    @keyframes mood-card-turn {
+      from { opacity: 0; transform: rotateY(-70deg); }
+      to { opacity: 1; transform: rotateY(0); }
+    }
+    @media (max-width: 800px) {
+      .mood-flip-grid { grid-template-columns: 1fr; }
+      .mood-card-front { min-height: 360px; padding: 28px; }
+      .mood-card-front h3 { min-height: 0; }
+      .mood-turn-button { max-width: 320px; }
+      .mood-card-front .mood-card-stat { font-size: 42px; }
+      .mood-card-back { padding: 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mood-card-panel { animation: none; }
+    }
+  </style>
 </head>
 
 <body>
@@ -61,118 +190,124 @@
         </blockquote>
       </section>
 
-      <!-- Comparison section before the questions -->
+      <!-- Comparison cards before the questions -->
       <section class="scene-part" aria-labelledby="comparison-heading">
         <h2 id="comparison-heading">Explore the differences</h2>
+        <p>Select “Learn more” to turn over each card.</p>
 
-        <p>
-          Open each bubble to learn more.
-          These descriptions do not diagnose a condition.
-        </p>
-
-        <div class="mood-comparisons">
-
-          <details class="mood-bubble">
-            <summary>Postpartum blues</summary>
-
-            <div class="mood-bubble-content">
-              <img
-                src="blues-icon.png"
-                alt=""
-                class="mood-condition-icon"
-                loading="lazy"
-              >
-
-              <h3>What might it look like?</h3>
-              <p>
-                Tearfulness, mood changes, irritability, or feeling
-                overwhelmed in the first few days after birth.
+        <div class="mood-flip-grid">
+          <article class="mood-flip-card" aria-labelledby="blues-front-heading">
+            <div id="blues-front" class="mood-card-panel mood-card-front">
+              <img src="blues-icon.png" alt="" class="mood-flip-icon" loading="lazy">
+              <h3 id="blues-front-heading">Baby blues</h3>
+              <p class="mood-card-stat">15%–84%</p>
+              <p class="mood-card-citation">
+                <a href="https://www.canada.ca/content/dam/hc-sc/documents/services/publications/healthy-living/maternity-newborn-care-guidelines-chapter-5/maternity-guidelines-chapter-5-en-info.pdf">Public Health Agency of Canada, 2024</a>
               </p>
-
-              <h3>What is the usual pattern?</h3>
-              <p>
-                Symptoms are generally mild and improve within
-                about two weeks.
-              </p>
-
-              <h3>What should happen?</h3>
-              <p>
-                Offer reassurance, practical help, and opportunities
-                for rest. Seek professional advice if symptoms worsen,
-                interfere with daily life, or continue beyond two weeks.
-                <strong>You can ask for help sooner.</strong>
-              </p>
+              <button type="button" class="button mood-turn-button"
+                      data-show="blues-back" data-hide="blues-front"
+                      aria-controls="blues-back">
+                Learn more <span aria-hidden="true">&rarr;</span>
+                <span class="mood-screen-reader"> about baby blues</span>
+              </button>
             </div>
-          </details>
 
-          <details class="mood-bubble">
-            <summary>Postpartum depression</summary>
-
-            <div class="mood-bubble-content">
-              <img
-                src="depression-icon.png"
-                alt=""
-                class="mood-condition-icon"
-                loading="lazy"
-              >
-
-              <h3>What might it look like?</h3>
-              <p>
-                Persistent sadness, loss of interest, hopelessness,
-                guilt, or difficulty managing daily activities.
+            <div id="blues-back" class="mood-card-panel mood-card-back" hidden>
+              <h3 id="blues-back-heading" tabindex="-1">Baby blues</h3>
+              <h4>What might it look like?</h4>
+              <p>Tearfulness, mood changes, irritability, or feeling overwhelmed in the first few days after birth.</p>
+              <h4>What is the usual pattern?</h4>
+              <p>Symptoms are generally mild and improve within about two weeks.</p>
+              <h4>What should happen?</h4>
+              <p>Practical help, reassurance, and opportunities for rest can help. Contact a healthcare professional if symptoms worsen, affect daily life, or continue beyond two weeks. <strong>You can ask for help sooner.</strong></p>
+              <p class="mood-card-citation">
+                Public Health Agency of Canada, 2024;<br>
+                <a href="https://www.camh.ca/en/professionals/treating-conditions-and-disorders/perinatal-mood-and-anxiety-disorders/perinatal-mood---diagnosis">Centre for Addiction and Mental Health, n.d.</a>
               </p>
-
-              <h3>What is the usual pattern?</h3>
-              <p>
-                Symptoms are more intense or persistent than
-                postpartum blues. Depression may begin during
-                pregnancy or after birth; it is not limited to
-                the first few weeks.
-              </p>
-
-              <h3>What should happen?</h3>
-              <p>
-                Contact a healthcare professional for assessment.
-                Treatment can include counselling, practical and
-                social support, and medication when appropriate.
-              </p>
+              <button type="button" class="mood-return-button"
+                      data-show="blues-front" data-hide="blues-back"
+                      aria-controls="blues-front">
+                <span aria-hidden="true">&larr;</span> Back to the statistic
+              </button>
             </div>
-          </details>
+          </article>
 
-          <details class="mood-bubble">
-            <summary>Postpartum psychosis</summary>
-
-            <div class="mood-bubble-content">
-              <img
-                src="psychosis-icon.png"
-                alt=""
-                class="mood-condition-icon"
-                loading="lazy"
-              >
-
-              <h3>What might it look like?</h3>
-              <p>
-                Hearing or seeing things others do not, unusual beliefs
-                disconnected from reality, severe confusion, or marked
-                changes in behaviour.
+          <article class="mood-flip-card" aria-labelledby="depression-front-heading">
+            <div id="depression-front" class="mood-card-panel mood-card-front">
+              <img src="depression-icon.png" alt="" class="mood-flip-icon" loading="lazy">
+              <h3 id="depression-front-heading">Postpartum depression</h3>
+              <p class="mood-card-stat">17.9%</p>
+              <p class="mood-card-citation">
+                <a href="https://doi.org/10.17269/s41997-020-00420-4">Gheorghe et al., 2021</a>
               </p>
-
-              <h3>What is the usual pattern?</h3>
-              <p>
-                It can begin suddenly, often early after birth,
-                and worsen quickly.
-              </p>
-
-              <h3>What should happen?</h3>
-              <p>
-                <strong>Seek emergency medical care immediately.</strong>
-                A trusted adult should stay with the person and ensure
-                another adult cares for the baby. Call 911 if there is
-                immediate danger or safe transport cannot be arranged.
-              </p>
+              <button type="button" class="button mood-turn-button"
+                      data-show="depression-back" data-hide="depression-front"
+                      aria-controls="depression-back">
+                Learn more <span aria-hidden="true">&rarr;</span>
+                <span class="mood-screen-reader"> about postpartum depression</span>
+              </button>
             </div>
-          </details>
 
+            <div id="depression-back" class="mood-card-panel mood-card-back" hidden>
+              <h3 id="depression-back-heading" tabindex="-1">Postpartum depression</h3>
+              <h4>What might it look like?</h4>
+              <p>Persistent sadness, loss of interest, hopelessness, guilt, or difficulty managing everyday activities.</p>
+              <h4>What is the usual pattern?</h4>
+              <p>Symptoms are more intense or persistent than baby blues. Depression can begin during pregnancy or after birth and is not limited to the first few weeks.</p>
+              <h4>What should happen?</h4>
+              <p>Contact a healthcare professional for assessment. Support may include counselling, practical help, and medication when appropriate. <strong>You do not need to wait two weeks if symptoms are distressing or affecting daily life.</strong></p>
+              <p class="mood-card-citation">
+                <a href="https://www.camh.ca/en/health-info/mental-illness-and-addiction-index/postpartum-depression">Centre for Addiction and Mental Health, n.d.</a>;<br>
+                <a href="https://doi.org/10.1177/07067437241303031">Vigod et al., 2025</a>
+              </p>
+              <button type="button" class="mood-return-button"
+                      data-show="depression-front" data-hide="depression-back"
+                      aria-controls="depression-front">
+                <span aria-hidden="true">&larr;</span> Back to the statistic
+              </button>
+            </div>
+          </article>
+
+          <article class="mood-flip-card" aria-labelledby="psychosis-front-heading">
+            <div id="psychosis-front" class="mood-card-panel mood-card-front">
+              <img src="psychosis-icon.png" alt="" class="mood-flip-icon" loading="lazy">
+              <h3 id="psychosis-front-heading">Postpartum psychosis</h3>
+              <p class="mood-card-stat">0.1%–0.2%</p>
+              <p class="mood-card-citation">
+                <a href="https://doi.org/10.1177/07067437241303031">Vigod et al., 2025</a>
+              </p>
+              <button type="button" class="button mood-turn-button"
+                      data-show="psychosis-back" data-hide="psychosis-front"
+                      aria-controls="psychosis-back">
+                Learn more <span aria-hidden="true">&rarr;</span>
+                <span class="mood-screen-reader"> about postpartum psychosis</span>
+              </button>
+            </div>
+
+            <div id="psychosis-back" class="mood-card-panel mood-card-back" hidden>
+              <h3 id="psychosis-back-heading" tabindex="-1">Postpartum psychosis</h3>
+              <h4>What might it look like?</h4>
+              <p>Hearing or seeing things others do not, unusual beliefs disconnected from reality, severe confusion, or marked changes in behaviour.</p>
+              <h4>What is the usual pattern?</h4>
+              <p>Symptoms can begin suddenly, often early after birth, and worsen quickly.</p>
+              <h4>What should happen?</h4>
+              <p><strong>Seek emergency medical assessment immediately.</strong> Do not wait for a routine appointment. A trusted adult should stay with the person while another adult cares for the baby. Call <strong>911</strong> if there is immediate danger or safe transportation cannot be arranged.</p>
+              <p class="mood-card-citation">
+                <a href="https://doi.org/10.1177/07067437241303031">Vigod et al., 2025</a>
+              </p>
+              <button type="button" class="mood-return-button"
+                      data-show="psychosis-front" data-hide="psychosis-back"
+                      aria-controls="psychosis-front">
+                <span aria-hidden="true">&larr;</span> Back to the statistic
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="mood-statistics-note">
+          <p>These descriptions do not diagnose a condition. The estimates come from different studies and time periods, are not directly comparable, and should not be added together.</p>
+          <p>Baby blues estimates vary widely. The depression statistic reflects symptoms reported by women in a Canadian survey, not confirmed diagnoses. The psychosis estimate is cited in Canadian clinical guidelines and is based on international evidence.</p>
+          <p><strong>Whatever the number, your symptoms and how they affect your daily life matter.</strong></p>
         </div>
       </section>
 
@@ -492,6 +627,28 @@
       document.getElementById("scene-ending").hidden = false;
 
       feedback.focus();
+    });
+  </script>
+
+  <script>
+    // Show one side at a time, including for keyboard and screen-reader users.
+    document.querySelectorAll('.mood-flip-card button[data-show]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const showing = document.getElementById(button.dataset.show);
+        const hiding = document.getElementById(button.dataset.hide);
+        hiding.hidden = true;
+        showing.hidden = false;
+
+        const card = button.closest('.mood-flip-card');
+        const heading = showing.querySelector('h3');
+        card.setAttribute('aria-labelledby', heading.id);
+
+        if (showing.classList.contains('mood-card-back')) {
+          heading.focus({ preventScroll: true });
+        } else {
+          showing.querySelector('button').focus({ preventScroll: true });
+        }
+      });
     });
   </script>
 </body>
