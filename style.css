@@ -1227,8 +1227,8 @@ button.button:focus-visible {
 
 .home-booties {
   display: block;
-  width: 200px;
-  max-width: 60%;
+  width: 350px;
+  max-width: 85%;
   height: auto;
   margin: 40px auto 0;
 }
