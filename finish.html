@@ -34,9 +34,9 @@
         <h1 id="quiz-heading">Check your understanding</h1>
 
         <p>
-          Practice what you’ve learned with five short questions.
+          Practice what you’ve learned with six short questions.
           These questions apply whichever character you followed.
-          Choose one answer for each question, then select
+          Choose one answer unless the question says “Select all that apply,” then select
           <strong>Check my answers</strong>.
           You can try again at any time.
         </p>
@@ -353,68 +353,84 @@
 
   <script>
     const quizQuestions = [
-      {
-        title: "Recognizing warning signs",
-        question: "A parent notices new, severe symptoms after giving birth. What should they do?",
-        options: [
-          "Assume the symptoms are a normal part of recovery.",
-          "Seek medical help promptly instead of waiting for a routine appointment.",
-          "Wait until someone else has experienced the same symptoms."
-        ],
-        correct: 1,
-        explanation: "New or severe symptoms should not automatically be dismissed as normal recovery. You do not need to know the diagnosis before asking for help. Call 911 if there is an immediate medical emergency."
-      },
-      {
-        title: "Working through barriers to care",
-        question: "A parent is having difficulty following their care plan because of transportation, cost, or limited support. What could help?",
-        options: [
-          "Stop following the plan without telling anyone.",
-          "Keep the difficulties to themselves.",
-          "Explain the difficulties to their healthcare team and ask for help making a workable plan."
-        ],
-        correct: 2,
-        explanation: "A care plan needs to consider your circumstances. Sharing difficulties gives your healthcare team an opportunity to explore available support and suitable options with you."
-      },
-      {
-        title: "Asking questions",
-        question: "A parent does not understand part of their discharge instructions. What could they say?",
-        options: [
-          "“Could you explain that in everyday words and tell me what I should do at home?”",
-          "“I should already understand, so I won’t ask.”",
-          "“I’ll pretend I understand and figure it out later.”"
-        ],
-        correct: 0,
-        explanation: "You deserve information you understand. Ask for another explanation, written instructions, or a chance to review the plan in your own words."
-      },
-      {
-        title: "Choosing reliable information",
-        question: "A parent wants more information about recovery after birth. Which is the best starting point?",
-        options: [
-          "An advertisement promising a quick recovery.",
-          "A patient resource from a hospital or public health organization, discussed with their healthcare team if anything is unclear.",
-          "A popular social media comment saying everyone should follow the same advice."
-        ],
-        correct: 1,
-        explanation: "Hospital and public health resources are useful starting points. General information may not fit every situation, so ask your healthcare team how it applies to your care."
-      },
-      {
-        title: "Finding support",
-        question: "A parent wants help finding postpartum services in their community. Where could they start?",
-        options: [
-          "Assume there are no services because they have not heard of any.",
-          "Wait until a friend recommends something.",
-          "Ask their healthcare team or local public health unit about available services."
-        ],
-        correct: 2,
-        explanation: "Your healthcare team and local public health unit can help you find community services. Explain what support you need and ask about availability, eligibility, and how to access it."
-      }
-    ];
+  {
+    "title": "Recognizing warning signs",
+    "question": "A parent notices new, severe symptoms after giving birth. What should they do?",
+    "options": [
+      "Assume the symptoms are a normal part of recovery.",
+      "Seek medical help promptly instead of waiting for a routine appointment.",
+      "Wait until someone else has experienced the same symptoms."
+    ],
+    "correct": 1,
+    "explanation": "New or severe symptoms should not automatically be dismissed as normal recovery. You do not need to know the diagnosis before asking for help. Call 911 if there is an immediate medical emergency."
+  },
+  {
+    "title": "Working through barriers to care",
+    "question": "A parent is having difficulty following their care plan because of transportation, cost, or limited support. What could help?",
+    "options": [
+      "Stop following the plan without telling anyone.",
+      "Keep the difficulties to themselves.",
+      "Explain the difficulties to their healthcare team and ask for help making a workable plan."
+    ],
+    "correct": 2,
+    "explanation": "A care plan needs to consider your circumstances. Sharing difficulties gives your healthcare team an opportunity to explore available support and suitable options with you."
+  },
+  {
+    "title": "Asking questions",
+    "question": "A parent does not understand part of their discharge instructions. What could they say?",
+    "options": [
+      "“Could you explain that in everyday words and tell me what I should do at home?”",
+      "“I should already understand, so I won’t ask.”",
+      "“I’ll pretend I understand and figure it out later.”"
+    ],
+    "correct": 0,
+    "explanation": "You deserve information you understand. Ask for another explanation, written instructions, or a chance to review the plan in your own words."
+  },
+  {
+    "title": "Choosing reliable information",
+    "question": "A parent wants more information about recovery after birth. Which is the best starting point?",
+    "options": [
+      "An advertisement promising a quick recovery.",
+      "A patient resource from a hospital or public health organization, discussed with their healthcare team if anything is unclear.",
+      "A popular social media comment saying everyone should follow the same advice."
+    ],
+    "correct": 1,
+    "explanation": "Hospital and public health resources are useful starting points. General information may not fit every situation, so ask your healthcare team how it applies to your care."
+  },
+  {
+    "title": "Finding support",
+    "question": "A parent wants help finding postpartum services in their community. Where could they start?",
+    "options": [
+      "Assume there are no services because they have not heard of any.",
+      "Wait until a friend recommends something.",
+      "Ask their healthcare team or local public health unit about available services."
+    ],
+    "correct": 2,
+    "explanation": "Your healthcare team and local public health unit can help you find community services. Explain what support you need and ask about availability, eligibility, and how to access it."
+  },
+  {
+    "title": "Conditions that need immediate assessment",
+    "question": "Which conditions require immediate medical assessment if they are suspected after birth? Select all that apply.",
+    "options": [
+      "Postpartum hemorrhage (severe bleeding after birth).",
+      "Postpartum preeclampsia (a high blood pressure complication after birth).",
+      "Postpartum psychosis.",
+      "Mild afterpains (uterine cramps) that improve with recommended comfort measures."
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Suspected postpartum hemorrhage, preeclampsia, and psychosis need immediate medical assessment. Mild, improving afterpains can be part of recovery. Contact your healthcare provider if cramps become severe, worsen, or do not improve with recommended pain relief."
+  }
+];
 
     const feedbackContent = {
       learner: {
         heading: "Learner feedback",
 
-        intro: "Now that you have explored the activity, answer these questions again. Think about how you feel now compared with before you began.",
+        intro: "Now that you have explored the activity, reflect on your confidence and your experience using this resource.",
 
         questions: [
           {
@@ -500,44 +516,56 @@
       return element;
     }
 
+    const feedbackSection = document.getElementById("feedback-section");
+    const completionSection = document.getElementById("completion-section");
+
     const quizForm = document.getElementById("knowledge-check");
     const questionsContainer = document.getElementById("quiz-questions");
     const results = document.getElementById("quiz-results");
-    const feedbackSection = document.getElementById("feedback-section");
-    const completionSection = document.getElementById("completion-section");
-    const letters = ["A", "B", "C"];
+    const letters = ["A", "B", "C", "D"];
 
-    // Build the five knowledge questions.
+    function correctChoices(item) {
+      return Array.isArray(item.correct) ? item.correct : [item.correct];
+    }
+
+    function answerIsCorrect(selected, item) {
+      const expected = correctChoices(item);
+      return selected.length === expected.length &&
+        expected.every(function (value) { return selected.includes(value); });
+    }
+
     quizQuestions.forEach(function (item, index) {
+      const multiple = Array.isArray(item.correct);
       const questionCard = makeElement("section", "quiz-question-card");
-
-      const heading = makeElement(
-        "h2",
-        "",
-        (index + 1) + ". " + item.title
-      );
-
+      const heading = makeElement("h2", "", (index + 1) + ". " + item.title);
       const fieldset = makeElement("fieldset", "scene-choices");
-      const legend = makeElement("legend", "", item.question);
+      fieldset.append(makeElement("legend", "", item.question));
 
-      fieldset.append(legend);
+      if (multiple) {
+        const help = makeElement("p", "small-text",
+          "Select every correct answer and no incorrect answers to earn this question’s point.");
+        help.id = "question-help-" + index;
+        fieldset.setAttribute("aria-describedby", help.id);
+        fieldset.append(help);
+      }
 
       item.options.forEach(function (option, optionIndex) {
         const label = makeElement("label", "scene-choice");
         const input = document.createElement("input");
-
-        input.type = "radio";
+        input.type = multiple ? "checkbox" : "radio";
         input.name = "question-" + index;
         input.value = String(optionIndex);
-        input.required = true;
+        input.required = !multiple;
 
-        const text = makeElement(
-          "span",
-          "",
-          letters[optionIndex] + ". " + option
-        );
+        if (multiple) {
+          input.addEventListener("change", function () {
+            fieldset.querySelectorAll("input").forEach(function (box) {
+              box.setCustomValidity("");
+            });
+          });
+        }
 
-        label.append(input, text);
+        label.append(input, makeElement("span", "", letters[optionIndex] + ". " + option));
         fieldset.append(label);
       });
 
@@ -547,63 +575,50 @@
 
     document.getElementById("check-answers").disabled = false;
 
-    // Check answers and show explanations.
     quizForm.addEventListener("submit", function (event) {
       event.preventDefault();
-
       const answers = new FormData(quizForm);
-      const explanations =
-        document.getElementById("answer-explanations");
 
+      for (let index = 0; index < quizQuestions.length; index++) {
+        if (answers.getAll("question-" + index).length === 0) {
+          const firstInput = quizForm.querySelector('[name="question-' + index + '"]');
+          firstInput.setCustomValidity("Choose at least one answer for this question.");
+          firstInput.reportValidity();
+          firstInput.focus();
+          return;
+        }
+      }
+
+      const explanations = document.getElementById("answer-explanations");
       explanations.replaceChildren();
-
       let score = 0;
 
       quizQuestions.forEach(function (item, index) {
-        const selected = answers.get("question-" + index);
-
-        const correct =
-          selected !== null && Number(selected) === item.correct;
-
-        if (correct) {
-          score++;
-        }
+        const selected = answers.getAll("question-" + index).map(Number);
+        const correct = answerIsCorrect(selected, item);
+        if (correct) score++;
 
         const card = makeElement("section", "answer-explanation");
-
-        const heading = makeElement(
-          "h3",
-          "",
-          (index + 1) + ". " + item.title
+        card.append(
+          makeElement("h3", "", (index + 1) + ". " + item.title),
+          makeElement("p", "answer-outcome",
+            correct ? "Your answer is correct." : "Review this answer.")
         );
 
-        const outcome = makeElement(
-          "p",
-          "answer-outcome",
-          correct ? "Your answer is correct." : "Review this answer."
-        );
-
-        const answer = makeElement(
-          "p",
-          "",
-          "Correct answer: " + letters[item.correct] + ". " +
-          item.options[item.correct]
-        );
-
-        const explanation = makeElement(
-          "p",
-          "",
-          item.explanation
-        );
-
-        card.append(heading, outcome, answer, explanation);
+        const multiple = Array.isArray(item.correct);
+        card.append(makeElement("p", "",
+          multiple ? "Correct answers:" : "Correct answer:"));
+        const answerList = makeElement("ul", "");
+        correctChoices(item).forEach(function (choice) {
+          answerList.append(makeElement("li", "", letters[choice] + ". " + item.options[choice]));
+        });
+        card.append(answerList, makeElement("p", "", item.explanation));
         explanations.append(card);
       });
 
+      const percentage = Math.round((score / quizQuestions.length) * 100);
       document.getElementById("quiz-score").textContent =
-        "You answered " + score + " out of " +
-        quizQuestions.length + " correctly.";
-
+        "Your score: " + score + "/" + quizQuestions.length + " (" + percentage + "%).";
       results.hidden = false;
       results.focus();
     });
@@ -613,6 +628,9 @@
       "click",
       function () {
         quizForm.reset();
+        quizForm.querySelectorAll("input").forEach(function (input) {
+          input.setCustomValidity("");
+        });
 
         results.hidden = true;
         feedbackSection.hidden = true;
